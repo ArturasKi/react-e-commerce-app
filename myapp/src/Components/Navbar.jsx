@@ -8,7 +8,7 @@ function Navbar() {
         <div className="nav-col-1">
             <div className="search-container">
                 <input></input>
-                <GrSearch />
+                <GrSearch className="icon-search" />
             </div>
         </div>
         <div className="nav-col-2">
