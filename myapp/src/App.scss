@@ -1,0 +1,55 @@
+* {
+  font-family: 'Comfortaa', cursive;
+}
+
+.nav-container {
+  height: 60px;
+  // background-color: #777;
+
+  .nav-row {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-col-1 {
+    flex: 1;
+    display: flex;
+    align-items: center ;
+  }
+
+  .search-container {
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    padding: 5px;
+  }
+
+  input {
+    border: none;
+    outline: none;
+  }
+
+  .nav-col-2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-col-3 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 25px;
+  }
+
+  .menu-item {
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 25px;
+  }
+}
