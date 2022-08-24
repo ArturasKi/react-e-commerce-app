@@ -64,7 +64,8 @@
   height: 100vh;
   display: flex;
   position: relative;
-  // overflow: hidden; // paslėpiam išeinančius slider'o elementus už ribų
+  overflow: hidden; // paslėpiam išeinančius slider'o elementus už ribų
+  transition: all 2s ease;
 
   .arrow {
     width: 50px;
@@ -97,53 +98,53 @@
     right: 15px;
   }
 
-  .wrapper {
+  // .wrapper {
+  //   height: 100%;
+  //   display: flex;
+  //   transform: translateX(0vw);
+  //   transition: all 2s ease;
+  // }
+}
+
+.slide {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+
+  .img-container {
+    width: 100%;
     height: 100%;
+    flex: 1;
+    object-fit: contain;
+  }
+
+  .info-container {
+    width: 100%;
+    height: 100%;
+    flex: 1;
     display: flex;
-    transform: translateX(0vw);
-    transition: all 2s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transition: ease-out 1s;
 
-    .slide {
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      align-items: center;
+    h1 {
+      font-size: 70px;
+    }
 
-      .img-container {
-        width: 100%;
-        height: 100%;
-        flex: 1;
-        object-fit: contain;
-      }
+    p {
+      margin: 50px 0;
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
 
-      .info-container {
-        width: 100%;
-        height: 100%;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        transition: ease-out 1s;
-
-        h1 {
-          font-size: 70px;
-        }
-
-        p {
-          margin: 50px 0;
-          font-size: 20px;
-          letter-spacing: 2px;
-        }
-
-        button {
-          padding: 10px;
-          font-size: 20px;
-          background-color: transparent;
-          cursor: pointer;
-          transition: 0.5s;
-        }
-      }
+    button {
+      padding: 10px;
+      font-size: 20px;
+      background-color: transparent;
+      cursor: pointer;
+      transition: 0.5s;
     }
   }
 }

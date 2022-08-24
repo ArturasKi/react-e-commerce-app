@@ -1,31 +1,26 @@
 import React, { useState } from "react";
 import { RiArrowRightSFill, RiArrowLeftSFill } from "react-icons/ri";
 import sliderData from "../sliderData.js";
+import { Wrapper } from "./StyledComponents.jsx";
 
-function Slider({ slides }) {
+function Slider() {
   const [slideIndex, setSlideIndex] = useState(0);
-  const length = slides.length;
 
-  const nextSlide = () => {
-    setSlideIndex(slideIndex === length - 1 ? 0 : slideIndex + 1);
-  };
-  console.log(slideIndex);
-  const prevSlide = () => {
-    setSlideIndex(slideIndex === 0 ? length - 1 : slideIndex - 1);
-  };
+  const handleClick = (direction) => {
 
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
+    if(direction === 'left') {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
+    }
   }
-
-  console.log(slideIndex)
 
   return (
     <div className="slider-container">
-      <div dir="left" className="arrow left" onClick={prevSlide}>
+      <div direction="left" className="arrow left" onClick={() => handleClick("left")}>
         <RiArrowLeftSFill />
       </div>
-      <div className="wrapper">
+      <Wrapper slideIndex={slideIndex}>
         {sliderData.map((item) =>
           (
             <div
@@ -43,8 +38,8 @@ function Slider({ slides }) {
             </div>
           )
         )}
-      </div>
-      <div className="arrow right" onClick={nextSlide}>
+      </Wrapper>
+      <div direction="right" className="arrow right" onClick={() => handleClick("right")}>
         <RiArrowRightSFill />
       </div>
     </div>
