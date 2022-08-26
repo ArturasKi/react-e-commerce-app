@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { RiArrowRightSFill, RiArrowLeftSFill } from "react-icons/ri";
-import sliderData from "../sliderData.js";
+import { sliderData } from "../data.js";
 import { Wrapper } from "./StyledComponents.jsx";
 
 function Slider() {
@@ -9,6 +9,7 @@ function Slider() {
   const handleClick = (direction) => {
 
     if(direction === 'left') {
+      // jei index > 0 => 0 - 1 - 2
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
     } else {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
@@ -21,15 +22,14 @@ function Slider() {
         <RiArrowLeftSFill />
       </div>
       <Wrapper slideIndex={slideIndex}>
-        {sliderData.map((item) =>
+        {sliderData ? sliderData.map((item) =>
           (
             <div
               key={item.id}
               className='slide'
               style={{ backgroundColor: item.bg}}
-              
             > 
-                <img className="img-container" src={item.img} alt='#'/>
+                <img className="img-container" src={item.img} alt=''/>
                 <div className="info-container">
                     <h1>{item.title}</h1>
                     <p>{item.desc}</p>
@@ -37,7 +37,7 @@ function Slider() {
                 </div>
             </div>
           )
-        )}
+        ) : null}
       </Wrapper>
       <div direction="right" className="arrow right" onClick={() => handleClick("right")}>
         <RiArrowRightSFill />
