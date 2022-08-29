@@ -16,4 +16,3 @@ function Category({category}) {
 }
 
 export default Category;
-

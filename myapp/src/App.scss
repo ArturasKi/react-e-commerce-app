@@ -149,19 +149,19 @@
   padding: 20px;
   .category-block {
     flex: 1;
-    margin: 10px;
+    margin: 20px;
     position: relative;
   }
   button {
     padding: 10px;
     font-size: 20px;
     background-color: #fff;
-    opacity: 0.7;
+    opacity: 0.5;
     cursor: pointer;
     transition: 0.5s;
   }
   button:hover {
-    opacity: 1;
+    opacity: 0.9;
   }
   .images {
     height: 100%;
@@ -183,6 +183,27 @@
     color: #adeeda;
     font-size: 36px;
     text-align: center;
+  }
+}
+
+.pr-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  justify-content: space-between;
+  .products {
+    flex: 1;
+    margin: 10px;
+    min-width: 280px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .pr-images {
+    height: 75%;
+    z-index: 2;
   }
 }
 
