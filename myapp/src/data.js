@@ -91,37 +91,37 @@ export const readings = [
     {
         id: 1,
         img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
-        date: 'Aug 22, 2022',
-        title: 'Title 1'
+        date: 'Aug 28, 2022',
+        title: "What's up autumn?!"
     },
     {
         id: 2,
         img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
-        date: 'Aug 25, 2022',
-        title: 'Title 2'
+        date: 'Aug 20, 2022',
+        title: 'How to combine clothes'
     },
     {
         id: 3,
         img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
-        date: 'Aug 26, 2022',
-        title: 'Title 3'
+        date: 'Aug 12, 2022',
+        title: 'Raw denim diaries #2'
     },
     {
         id: 4,
         img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
-        date: 'Aug 28, 2022',
-        title: 'Title 4'
+        date: 'Aug 04, 2022',
+        title: 'Plan your clothes for the weekend'
     },
     {
         id: 5,
         img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
-        date: 'Aug 29, 2022',
-        title: 'Title 5'
+        date: 'Jul 23, 2022',
+        title: 'Sustainability'
     },
     {
         id: 6,
         img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
-        date: 'Aug 30, 2022',
-        title: 'Title 6'
+        date: 'Jul 15, 2022',
+        title: 'Raw denim diaries #1'
     }
 ]

@@ -1,6 +1,8 @@
 function Video() {
   return (
-    <div>Video Background</div>
+    <div className="video-container">
+      Video Background
+    </div>
   )
 }
 

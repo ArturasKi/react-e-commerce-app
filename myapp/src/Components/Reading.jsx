@@ -2,7 +2,9 @@ function Reading({reading}) {
   return (
             <div className='col-read'>
                 <div className='read-images'>
-                    <img src={reading.img} alt='' />
+                    <div className="image">
+                        <img src={reading.img} alt='' />
+                    </div>
                 </div>
                 <div className="info">
                     <h6>{reading.date}</h6>
