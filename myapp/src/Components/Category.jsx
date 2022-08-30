@@ -4,7 +4,9 @@ function Category({category}) {
     <>
     <div>
       <div className="category-block">
-        <img className="images" src={category.img} alt='' />
+        <div className="cat-image">
+          <img src={category.img} alt='' />
+        </div>
         <div className="info">
           <h1>{category.title}</h1>
           <button>SHOP NOW</button>
