@@ -90,37 +90,37 @@ export const products = [
 export const readings = [
     {
         id: 1,
-        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        img: 'https://www.fashiongonerogue.com/wp-content/uploads/2018/09/HM-Fall-2018-Casual-Outfit-Ideas01.jpg',
         date: 'Aug 28, 2022',
         title: "What's up autumn?!"
     },
     {
         id: 2,
-        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        img: 'https://www.byrdie.com/thmb/aToMiU52_2NZkNXG9zgSSpSqzJw=/800x800/filters:fill(auto,1)/greenjumpsuit-c700f1b32e5c4bd3ad561339dc9a25f2.jpg',
         date: 'Aug 20, 2022',
-        title: 'How to combine clothes'
+        title: 'New dress trends'
     },
     {
         id: 3,
-        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        img: 'https://www.wedenim.com/wp-content/uploads/2021/09/SauceZhan-317XX-RAW79-Men-Jeans-Selvedge-Raw-Denim-Jeans-Loose-Wide-Leg-Jeans-Unsanforized-Denim-Jeans.jpg',
         date: 'Aug 12, 2022',
         title: 'Raw denim diaries #2'
     },
     {
         id: 4,
-        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        img: 'https://media.lexception.com/img/products/red-wing/64041-red-wing-bootsironrangercopperroughtough-02-0800-0800.jpg',
         date: 'Aug 04, 2022',
-        title: 'Plan your clothes for the weekend'
+        title: 'Shoes that always looks great'
     },
     {
         id: 5,
-        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        img: 'https://wellmagazineasia.com/wp-content/uploads/2021/01/Sustainable-fashion-in-Hong-Kong-Eco-friendly-brands-fashion-into-the-future-s-800x800.jpg',
         date: 'Jul 23, 2022',
         title: 'Sustainability'
     },
     {
         id: 6,
-        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        img: 'https://cdn.shopify.com/s/files/1/0468/7062/6459/products/Jeans_2_1200x1200.jpg?v=1628873495',
         date: 'Jul 15, 2022',
         title: 'Raw denim diaries #1'
     }
