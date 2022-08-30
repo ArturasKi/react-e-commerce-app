@@ -86,3 +86,42 @@ export const products = [
         img: pr_tshirt,
     },
 ]
+
+export const readings = [
+    {
+        id: 1,
+        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        date: 'Aug 22, 2022',
+        title: 'Title 1'
+    },
+    {
+        id: 2,
+        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        date: 'Aug 25, 2022',
+        title: 'Title 2'
+    },
+    {
+        id: 3,
+        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        date: 'Aug 26, 2022',
+        title: 'Title 3'
+    },
+    {
+        id: 4,
+        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        date: 'Aug 28, 2022',
+        title: 'Title 4'
+    },
+    {
+        id: 5,
+        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        date: 'Aug 29, 2022',
+        title: 'Title 5'
+    },
+    {
+        id: 6,
+        img: 'https://cdn.shopify.com/s/files/1/0085/7450/0979/products/BC-01-TAPERED-CHINO-11-oz-military-selvedge-denim-fit-4_0b2f65e5-be77-4eda-b538-0420d3bc37df_1000x1000.jpg?v=1647438436',
+        date: 'Aug 30, 2022',
+        title: 'Title 6'
+    }
+]
