@@ -7,7 +7,7 @@ function Navbar() {
     <div className="nav-container">
       <div className="nav-row">
         <div className="nav-col-1">
-            <h1>LOGO.</h1>
+          <NavLink to="/" className="menu-item"><h1>LOGO.</h1></NavLink>
         </div>
         <div className="nav-col-2">
             <div className="search-container">

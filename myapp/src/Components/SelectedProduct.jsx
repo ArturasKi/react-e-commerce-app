@@ -2,7 +2,7 @@ import { products } from "../data"
 
 function SelectedProduct() {
   return (
-    <div className="container">
+    <div className="sel-container">
         <img src={products[0].img} alt="#" />
         <div className="about">
             <div>

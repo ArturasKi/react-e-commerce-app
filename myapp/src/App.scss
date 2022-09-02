@@ -36,6 +36,7 @@
 
   .menu-item {
     text-decoration: none;
+    color: #000;
   }
 
   input {
@@ -496,7 +497,7 @@
 }
 
 // SELECTED PRODUCT
-.container {
+.sel-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
