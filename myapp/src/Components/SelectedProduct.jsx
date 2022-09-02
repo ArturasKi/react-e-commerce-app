@@ -13,17 +13,17 @@ function SelectedProduct() {
             <div className="col-size">
                 <h5>Color:</h5>
                 <select>
-                    <option option disabled>Color</option>
-                    <option>Briar</option>
-                    <option>Brown</option>
-                    <option>Black</option>
+                    <option value='0'>Color</option>
+                    <option value='1'>Briar</option>
+                    <option value='2'>Brown</option>
+                    <option value='3'>Black</option>
                 </select>
                 <h5>Size:</h5>
                 <select>
-                    <option option disabled>Size</option>
-                    <option>42</option>
-                    <option>43</option>
-                    <option>44</option>
+                    <option value='0'>Size</option>
+                    <option value='1'>42</option>
+                    <option value='2'>43</option>
+                    <option value='3'>44</option>
                 </select>
             </div>
         </div>

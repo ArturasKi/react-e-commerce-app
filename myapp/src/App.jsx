@@ -3,8 +3,13 @@ import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-route
 import Product from './Pages/Product';
 import Home from './Pages/Home';
 import ProductList from './Pages/ProductList';
+import { useState } from 'react';
 
 function App() {
+
+  const [selectedProduct, setSelectedProduct] = useState([]);
+
+
   return (
     <BrowserRouter>
       <Routes>

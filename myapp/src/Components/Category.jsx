@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function Category({category}) {
 
   return (
@@ -9,7 +11,9 @@ function Category({category}) {
         </div>
         <div className="info">
           <h1>{category.title}</h1>
-          <button>SHOP NOW</button>
+          <NavLink to="/productlist/mens" className="menu-item">
+            <button>SHOP NOW</button>
+          </NavLink>
         </div>
       </div>
     </div>
