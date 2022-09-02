@@ -6,6 +6,7 @@
 .nav-container {
   height: 100%;
   width: 100%;
+  color: #000;
 
   .nav-row {
     padding: 10px 20px;
@@ -31,6 +32,10 @@
       filter: invert(0.75);
       cursor: pointer;
     }
+  }
+
+  .menu-item {
+    text-decoration: none;
   }
 
   input {
