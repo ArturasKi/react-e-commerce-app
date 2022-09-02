@@ -15,21 +15,21 @@ export const sliderData = [
         id: 1,
         img: summer,
         title: "SUMMER SALE",
-        desc: "DON'T COMPROMISE ON STYLE! GET OVER 70% OFF FOR SUMMER CLOTHES.",
+        desc: "GET OVER 70% OFF FOR SUMMER COLLETION CLOTHES!",
         bg: "#fffaaa"
     },
     {
         id: 2,
         img: autumn,
         title: "AUTUMN COLLECTION",
-        desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+        desc: "SEE WHAT'S NEW IN AN UPCOMING AUTUMN COLLECTION.",
         bg: "#edaeda"
     },
     {
         id: 3,
         img: winter,
-        title: "WINTER COLLECTION COMING SOON...",
-        desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+        title: "WINTER IS COMING...",
+        desc: "COMING SOON.",
         bg: "#adeeda"
     },
 ];
