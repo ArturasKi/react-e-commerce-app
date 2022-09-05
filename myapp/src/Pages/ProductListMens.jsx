@@ -1,8 +1,8 @@
 import Footer from "../Components/Footer"
 import Navbar from "../Components/Navbar"
-import Products from "../Components/Products"
+import ProductsMens from "../Components/ProductsMens"
 
-function ProductList() {
+function ProductListMens() {
   return (
     <div>
         <Navbar />
@@ -37,10 +37,10 @@ function ProductList() {
                 </select>
             </div>
         </div>
-        <Products />
+        <ProductsMens />
         <Footer />
     </div>
   )
 }
 
-export default ProductList
+export default ProductListMens;

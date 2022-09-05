@@ -1,27 +1,30 @@
 import { useState } from "react"
 import { products } from "../data"
 
-function SelectedProduct() {
-
+function SelectedProduct({ product }) {
+    
+    
     const [color, setColor] = useState('Color');
     const [size, setSize] = useState('Size');
 
     const selectColor = (e) => {
         setColor(e.target.value);
+        console.log(product)
     }
 
     const selectSize = (e) => {
         setSize(e.target.value);
+        // console.log(selectProduct)
     }
 
   return (
     <div className="sel-container">
-        <img src={products[0].img} alt="#" />
+        <img src={products[3].img} alt="#" />
         <div className="about">
             <div>
-                <h2 style={{color: color}}>Classic Moc</h2>
+                <h2 style={{color: color}}>{products[3].title}</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, hic nisi, recusandae minima dolores at totam voluptatibus ipsum magni adipisci ipsa soluta placeat vitae consectetur repudiandae tenetur, officiis perferendis nihil.</p>
-                <h4>Price: 299.00 EUR</h4>
+                <h4>Price: {products[3].price}</h4>
             </div>
             <div className="col-size">
                 <h5>Color:</h5>

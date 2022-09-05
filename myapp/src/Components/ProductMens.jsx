@@ -1,7 +1,13 @@
 import { FiHeart, FiShoppingCart, FiSearch } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
-function Product({ product }) {
+function ProductMens({ product }) {
+
+
+  const sayYes = () => {
+    console.log(product)
+  }
+
   return (
     <div className="products">
       <img className="pr-images" src={product.img} alt="" />
@@ -14,7 +20,7 @@ function Product({ product }) {
         </div>
         <div className="icon">
           <NavLink to="/productlist/mens/product" className="menu-item">
-            <FiSearch />
+            <FiSearch onClick={sayYes}/>
           </NavLink>
         </div>
       </div>
@@ -22,4 +28,4 @@ function Product({ product }) {
   );
 }
 
-export default Product;
+export default ProductMens;
