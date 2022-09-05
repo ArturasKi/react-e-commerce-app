@@ -1,16 +1,15 @@
 import './App.scss';
-import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Product from './Pages/Product';
 import Home from './Pages/Home';
 import ProductList from './Pages/ProductList';
-import { useState } from 'react';
+import AppContext from './Components/AppContext';
 
 function App() {
 
-  const [selectedProduct, setSelectedProduct] = useState([]);
-
-
   return (
+    <AppContext.Provider value={{
+    }}>
     <BrowserRouter>
       <Routes>
           <Route path="/" element={<Home show="home" />} />
@@ -20,6 +19,7 @@ function App() {
           <Route path="/productlist/womens/product" element={<Product show="product" />} />
       </Routes>
     </BrowserRouter>
+    </AppContext.Provider>
   );
 }
 
