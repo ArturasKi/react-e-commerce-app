@@ -5,24 +5,23 @@ import Home from './Pages/Home';
 import ProductListMens from './Pages/ProductListMens';
 import ProductListWomens from './Pages/ProductListWomens';
 import AppContext from './Components/AppContext';
-import { useState, useEffect } from 'react';
+import { products } from './data.js';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { create, read, remove, edit } from './Functions/localStorage.js';
 
 function App() {
 
-  const [selectProduct, setSelectProduct] = useState(null);
+  const [lastUpdate, setLastUpdate] = useState(Date.now());
+  const [pr, setPr] = useState([]);
 
   useEffect(() => {
-    if(selectProduct === null) {
-      return;
-    }
-    setSelectProduct(selectProduct)
-
-  }, [selectProduct]);
+    setPr(read());
+  }, [lastUpdate])
 
   return (
     <AppContext.Provider value={{
-      setSelectProduct,
-      selectProduct
+      products
     }}>
     <BrowserRouter>
       <Routes>

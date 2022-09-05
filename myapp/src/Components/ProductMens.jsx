@@ -3,9 +3,12 @@ import { NavLink } from "react-router-dom";
 
 function ProductMens({ product }) {
 
-
   const sayYes = () => {
-    console.log(product)
+    localStorage.setItem('id', product.id);
+    localStorage.setItem('title', product.title);
+    localStorage.setItem('price', product.price);
+    localStorage.setItem('img', JSON.stringify(product.img));
+    console.log(product.id)
   }
 
   return (
@@ -16,7 +19,7 @@ function ProductMens({ product }) {
           <FiShoppingCart />
         </div>
         <div className="icon">
-          <FiHeart />
+          <FiHeart onClick={sayYes} />
         </div>
         <div className="icon">
           <NavLink to="/productlist/mens/product" className="menu-item">
