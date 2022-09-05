@@ -19,7 +19,7 @@ function SelectedProduct() {
       <img src={JSON.parse(localStorage.img)} alt="#" />
       <div className="about">
         <div>
-          <h2 style={{ color: color }}>{localStorage.title}</h2>
+          <h2>{localStorage.title}</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
             hic nisi, recusandae minima dolores at totam voluptatibus ipsum
@@ -31,7 +31,7 @@ function SelectedProduct() {
         <div className="col-size">
           <h5>Color:</h5>
           <select onChange={selectColor} value={color}>
-            <option value="color">Color</option>
+            <option value="Color">Color</option>
             <option value="red">Red</option>
             <option value="brown">Brown</option>
             <option value="green">Green</option>
@@ -39,7 +39,7 @@ function SelectedProduct() {
           <h5>Size:</h5>
           {localStorage.category === "shoes" ? (
             <select onChange={selectSize} value={size}>
-              <option value="">Size</option>
+              <option value="Size">Size</option>
               <option value="41">41</option>
               <option value="42">42</option>
               <option value="43">43</option>
@@ -48,12 +48,12 @@ function SelectedProduct() {
             </select>
           ) : localStorage.category === "accessories" ? (
             <select onChange={selectSize} value={size}>
-              <option value="">Size</option>
+              <option value="Size">Size</option>
               <option value="Onesize">One Size</option>
             </select>
           ) : (
             <select onChange={selectSize} value={size}>
-              <option value="">Size</option>
+              <option value="Size">Size</option>
               <option value="XS">XS</option>
               <option value="S">S</option>
               <option value="M">M</option>
@@ -76,6 +76,9 @@ function SelectedProduct() {
             style={size === "Size" ? { display: "none" } : { display: "block" }}
           >
             Selected size: <b>{size}</b>
+          </div>
+          <div className="col-size">
+            <button>ADD TO CART</button>
           </div>
         </div>
       </div>

@@ -16,6 +16,7 @@ function App() {
         products,
       }}
     >
+
       <BrowserRouter>
       <ScrollToTop />
         <Routes>
@@ -23,7 +24,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route
             path="/productlist/mens"
-            element={<ProductListMens show="productlist" />}
+            element={<ProductListMens />}
           />
           <Route
             path="/productlist/mens/product"
