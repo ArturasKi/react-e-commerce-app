@@ -6,8 +6,10 @@ import ProductListMens from "./Pages/ProductListMens";
 import ProductListWomens from "./Pages/ProductListWomens";
 import AppContext from "./Components/AppContext";
 import { products } from "./data.js";
+import ScrollToTop from "./ScrollToTop.js";
 
 function App() {
+
   return (
     <AppContext.Provider
       value={{
@@ -15,7 +17,9 @@ function App() {
       }}
     >
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
+          
           <Route path="/" element={<Home />} />
           <Route
             path="/productlist/mens"
