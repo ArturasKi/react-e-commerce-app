@@ -22,7 +22,7 @@
 }
 
 .announcement {
-  padding: 8px 50px;
+  padding: 8px 65px;
   font-size: 13px;
   
 } 
@@ -30,7 +30,7 @@
 // NAVIGATION
 .nav-container.active {
   background-color: #fff;
-  box-shadow: 0.5px 0.5px 0.5px;
+  box-shadow: 1px 1px 10px #dbdbdb;
   top: 30px;
   // transform: translate(0, 0);
   .search-container {
@@ -42,12 +42,16 @@
   height: 100%;
   width: 100%;
   color: #000;
+  font-weight: bold;
   background-color: transparent;
   position: sticky;
   top: 0;
   z-index: 20;
   // transform: translate(0, -10vh);
   transition: 0.2s linear;
+  &:hover {
+    background-color: #fff;
+  }
 
   .nav-row {
     padding: 10px 20px;
@@ -63,19 +67,7 @@
     align-items: center;
   }
 
-  .search-container {
-    border: 1px solid lightgray;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    margin-left: 25px;
-    padding: 5px;
 
-    .icon-search {
-      filter: invert(0.75);
-      cursor: pointer;
-    }
-  }
 
   .menu-item {
     text-decoration: none;
@@ -100,13 +92,42 @@
     align-items: center;
     justify-content: flex-end;
     margin-right: 25px;
+
+    .icon-search {
+      background: transparent;
+      cursor: pointer;
+    }
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
   }
 
   .menu-item {
     font-size: 14px;
     cursor: pointer;
-    margin-left: 25px;
+    margin-left: 40px;
   }
+}
+
+.search-open {
+  position: absolute;
+  width: 100;
+  height: 90px;
+  background-color: #f8f9fa;
+
+  input {
+    // height: 88px;
+    background-color: #f8f9fa;
+    padding: 37px;
+    width: 100%;
+  }
+}
+
+.search-open.search-close {
+  display: none;
 }
 
 // SLIDER
