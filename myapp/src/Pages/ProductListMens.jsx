@@ -1,3 +1,4 @@
+import Announcement from "../Components/Announcement";
 import Footer from "../Components/Footer"
 import Navbar from "../Components/Navbar"
 import ProductsMens from "../Components/ProductsMens"
@@ -5,6 +6,7 @@ import ProductsMens from "../Components/ProductsMens"
 function ProductListMens() {
   return (
     <div>
+        <Announcement />
         <Navbar />
         <div className="filter-container">
             <div className="filter">

@@ -1,3 +1,4 @@
+import Announcement from '../Components/Announcement';
 import CategoryList from '../Components/CategoryList';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
@@ -9,6 +10,7 @@ import Slider from '../Components/Slider';
 function Home() {
   return (
     <div>
+        <Announcement />
         <Navbar />
         <Slider />
         <CategoryList />

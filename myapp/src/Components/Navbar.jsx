@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { GrSearch, GrCart } from 'react-icons/gr';
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    if(window.scrollY >= 90) {
+      setNavbar(true)
+    } else {
+      setNavbar(false);
+    }
+  }
+
+  window.addEventListener('scroll', changeBackground);
+
   return (
-    <div className="nav-container">
+    <div className={navbar ? 'nav-container active' : 'nav-container'}>
       <div className="nav-row">
         <div className="nav-col-1">
           <NavLink to="/" className="menu-item"><h1>LOGO.</h1></NavLink>
