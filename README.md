@@ -1,4 +1,4 @@
-# E-commerce-app ()
+# E-commerce-app
 
 _Portfolio project_
 
