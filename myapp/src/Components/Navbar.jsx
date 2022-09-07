@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { GrSearch, GrCart } from 'react-icons/gr';
-import { RiAccountCircleLine } from 'react-icons/ri';
+import { RiAccountCircleLine, RiCloseFill } from 'react-icons/ri';
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
 
   const [navbar, setNavbar] = useState(false);
-  const [searchToggle, setSearchToggle] = useState(false);
+  const [searchToggle, setSearchToggle] = useState(true);
 
   const changeBackground = () => {
     if(window.scrollY >= 90) {
@@ -20,8 +20,14 @@ function Navbar() {
   window.addEventListener('scroll', changeBackground);
 
   const click = () => {
-      setSearchToggle(!searchToggle)
+    setSearchToggle(!searchToggle && (document.body.style.overflow = "hidden"))
     }
+  
+  const close = () => {
+    setSearchToggle(!searchToggle && (document.body.style.overflow = "visible"))
+  }
+    
+    
 
   useEffect(() => {
     setTimeout(3000);
@@ -34,41 +40,40 @@ function Navbar() {
           <NavLink to="/" className="menu-item"><h1>LOGO.</h1></NavLink>
         </div>
         <div className="nav-col-2">
-            <NavLink to="/productlist/mens" className="menu-item" style={({ isActive }) => // funkcija gauna argumentą isActive, jei true vienas stilus, false - kitas;
+            <NavLink to="/productlist/mens" className="menu-item" style={({ isActive }) =>
                         isActive ? {
                             color: 'crimson',
                             fontWeight: 'bold'
                         } : undefined
                         }>MENS</NavLink>
-            <NavLink to="/productlist/womens" className="menu-item" style={({ isActive }) => // funkcija gauna argumentą isActive, jei true vienas stilus, false - kitas;
+            <NavLink to="/productlist/womens" className="menu-item" style={({ isActive }) =>
                         isActive ? {
                             color: 'crimson',
                             fontWeight: 'bold'
                         } : undefined
                         }>WOMENS</NavLink>
-            <NavLink to="/register" className="menu-item" style={({ isActive }) => // funkcija gauna argumentą isActive, jei true vienas stilus, false - kitas;
+            <NavLink to="/register" className="menu-item" style={({ isActive }) =>
                         isActive ? {
                             color: 'crimson',
                             fontWeight: 'bold'
                         } : undefined
                         }>BLOG</NavLink>
-            <NavLink to="/register" className="menu-item" style={({ isActive }) => // funkcija gauna argumentą isActive, jei true vienas stilus, false - kitas;
+            <NavLink to="/register" className="menu-item" style={({ isActive }) =>
                         isActive ? {
                             color: 'crimson',
                             fontWeight: 'bold'
                         } : undefined
                         }>SALE</NavLink>
-           
         </div>
         <div className="nav-col-3">
             <button onClick={click}><GrSearch className="icon-search" /></button>
-            <NavLink to="/cart" className="menu-item" style={({ isActive }) => // funkcija gauna argumentą isActive, jei true vienas stilus, false - kitas;
+            <NavLink to="/cart" className="menu-item" style={({ isActive }) =>
                         isActive ? {
                             color: 'crimson',
                             fontWeight: 'bold'
                         } : undefined
                         }><GrCart /></NavLink>
-            <NavLink to="/account" className="menu-item" style={({ isActive }) => // funkcija gauna argumentą isActive, jei true vienas stilus, false - kitas;
+            <NavLink to="/account" className="menu-item" style={({ isActive }) =>
                         isActive ? {
                             color: 'crimson',
                             fontWeight: 'bold'
@@ -76,8 +81,11 @@ function Navbar() {
                         }><RiAccountCircleLine /></NavLink>
         </div>
       </div>
+      <div className={searchToggle ? "modal" : "modal-open"} >
       <div className={searchToggle ? "search-open search-close" : "search-open"}>
-        <input></input>
+        <input placeholder="Search Your Clothes"></input>
+        <span onClick={close} className="close"><RiCloseFill /></span>
+      </div>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@
   background-color: #ffcd00;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 9;
   transform: translate(0, 0);
   transition: 0.2s linear;
 }
@@ -24,14 +24,14 @@
 .announcement {
   padding: 8px 65px;
   font-size: 13px;
-  
-} 
+}
 
 // NAVIGATION
 .nav-container.active {
   background-color: #fff;
   box-shadow: 1px 1px 10px #dbdbdb;
   top: 30px;
+
   // transform: translate(0, 0);
   .search-container {
     background-color: #fff;
@@ -49,8 +49,9 @@
   z-index: 20;
   // transform: translate(0, -10vh);
   transition: 0.2s linear;
+
   &:hover {
-    background-color: #fff;
+    // background-color: #fff;
   }
 
   .nav-row {
@@ -58,7 +59,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
   }
 
   .nav-col-1 {
@@ -77,6 +78,9 @@
   input {
     border: none;
     outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #dbdbdb;
   }
 
   .nav-col-2 {
@@ -112,18 +116,52 @@
   }
 }
 
+.modal {
+  overflow: hidden;
+  transform: translateX(-100%);
+}
+
+.modal-open {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  transition: 0.5s linear;
+  overflow: visible;
+  transform: translateX(0);
+}
+
 .search-open {
-  position: absolute;
-  width: 100;
+  position: fixed;
+  top: 118px;
+  box-sizing: border-box;
+  width: 100%;
   height: 90px;
   background-color: #f8f9fa;
+  display: flex;
 
   input {
-    // height: 88px;
     background-color: #f8f9fa;
     padding: 37px;
     width: 100%;
+
   }
+
+  .close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 40px;
+    color: #dbdbdb;
+    cursor: pointer;
+  }
+}
+
+::placeholder {
+  color: #dbdbdb;
 }
 
 .search-open.search-close {
@@ -614,6 +652,7 @@
     cursor: pointer;
     transition: 0.5s;
     color: #fff;
+
     &:hover {
       background-color: transparent;
       color: black;
