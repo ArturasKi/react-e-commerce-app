@@ -4,8 +4,9 @@ import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 import Newsletter from '../Components/Newsletter';
 import ProductsHome from '../Components/ProductsHome';
-import ReadingList from '../Components/ReadingList';
+import ReadingListHome from '../Components/ReadingListHome';
 import Slider from '../Components/Slider';
+import BtnUp from '../Components/BtnUp';
 
 function Home() {
   return (
@@ -15,9 +16,10 @@ function Home() {
         <Slider />
         <CategoryList />
         <ProductsHome />
-        <ReadingList />
+        <ReadingListHome />
         <Newsletter />
         <Footer />
+        <BtnUp />
     </div>
   )
 }

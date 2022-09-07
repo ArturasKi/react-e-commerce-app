@@ -16,6 +16,11 @@ function Slider() {
     }
   }
 
+  const slideDown = () => {
+    const element = document.querySelector('.pr-container');
+    element.scrollIntoView();
+  }
+
   return (
     <div className="slider-container">
       <div direction="left" className="arrow left" onClick={() => handleClick("left")}>
@@ -33,7 +38,7 @@ function Slider() {
                 <div className="info-container">
                     <h1>{item.title}</h1>
                     <p>{item.desc}</p>
-                    <button>SHOP NOW</button>
+                    <button onClick={slideDown}>SHOP NOW</button>
                 </div>
             </div>
           )

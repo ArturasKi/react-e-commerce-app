@@ -7,6 +7,9 @@ import ProductListWomens from "./Pages/ProductListWomens";
 import AppContext from "./Components/AppContext";
 import { products } from "./data.js";
 import ScrollToTop from "./ScrollToTop.js";
+import Blog from "./Pages/Blog";
+import Cart from "./Pages/Cart";
+import Sale from "./Pages/Sale";
 
 function App() {
 
@@ -36,6 +39,18 @@ function App() {
           <Route
             path="/productlist/womens/product"
             element={<ProductPage />}
+          />
+          <Route
+            path="/blog"
+            element={<Blog />}
+          />
+          <Route
+            path="/cart"
+            element={<Cart />}
+          />
+          <Route
+            path="/sale"
+            element={<Sale />}
           />
         </Routes>
       </BrowserRouter>

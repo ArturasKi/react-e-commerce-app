@@ -52,13 +52,13 @@ function Navbar() {
                             fontWeight: 'bold'
                         } : undefined
                         }>WOMENS</NavLink>
-            <NavLink to="/register" className="menu-item" style={({ isActive }) =>
+            <NavLink to="/blog" className="menu-item" style={({ isActive }) =>
                         isActive ? {
                             color: 'crimson',
                             fontWeight: 'bold'
                         } : undefined
                         }>BLOG</NavLink>
-            <NavLink to="/register" className="menu-item" style={({ isActive }) =>
+            <NavLink to="/sale" className="menu-item" style={({ isActive }) =>
                         isActive ? {
                             color: 'crimson',
                             fontWeight: 'bold'
@@ -82,10 +82,10 @@ function Navbar() {
         </div>
       </div>
       <div className={searchToggle ? "modal" : "modal-open"} >
-      <div className={searchToggle ? "search-open search-close" : "search-open"}>
-        <input placeholder="Search Your Clothes"></input>
-        <span onClick={close} className="close"><RiCloseFill /></span>
-      </div>
+        <div className={searchToggle ? "search-open search-close" : "search-open"}>
+          <input placeholder="Search Your Clothes"></input>
+          <span onClick={close} className="close"><RiCloseFill /></span>
+        </div>
       </div>
     </div>
   );
