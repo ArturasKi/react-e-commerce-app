@@ -565,7 +565,6 @@ html {
     justify-content: center;
     align-items: center;
     padding: 0px 10px;
-    
 
     .category-block {
       flex: 1;
@@ -578,20 +577,20 @@ html {
   }
 }
 
-
-
 // PRODUCTS
 .pr-container {
   display: flex;
   flex-wrap: wrap;
+  // width: 100vw;
   padding: 15px;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .products {
   flex: 1;
   margin: 0 15px 30px;
-  min-width: 280px;
+  min-width: 20%;
   height: 350px;
   display: flex;
   align-items: center;
@@ -640,6 +639,26 @@ html {
     &:hover {
       background-color: #e9f5f5;
       transform: scale(1.1);
+    }
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .products {
+    min-width: 20%;
+
+    .pr-images {
+      height: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .products {
+    min-width: 45%;
+
+    .pr-images {
+      height: 60%;
     }
   }
 }

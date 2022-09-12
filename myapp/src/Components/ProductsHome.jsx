@@ -5,7 +5,7 @@ function Products() {
   return (
     <div className='pr-container'>
         {
-            products.slice(0, 12).map((product) => <ProductMens key={product.id} product={product} />)
+            products.slice(0, 8).map((product) => <ProductMens key={product.id} product={product} />)
         }
     </div>
   )
