@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { GrSearch, GrCart } from 'react-icons/gr';
 import { RiAccountCircleLine, RiCloseFill } from 'react-icons/ri';
+import { AiOutlineMenu } from 'react-icons/ai';
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
@@ -27,8 +28,6 @@ function Navbar() {
     setSearchToggle(!searchToggle && (document.body.style.overflow = "visible"))
   }
     
-    
-
   useEffect(() => {
     setTimeout(3000);
   }, [setSearchToggle])
@@ -36,7 +35,10 @@ function Navbar() {
   return (
     <div className={navbar ? 'nav-container active' : 'nav-container'}>
       <div className="nav-row">
-        <div className="nav-col-1">
+        <div className="nav-col-left">
+          <AiOutlineMenu className="hamburger" />
+        </div>
+        <div className="nav-col-1 nav-col-right">
           <NavLink to="/" className="menu-item"><h1>LOGO.</h1></NavLink>
         </div>
         <div className="nav-col-2">

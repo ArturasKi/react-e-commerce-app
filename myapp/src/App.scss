@@ -30,13 +30,20 @@ html {
   font-size: 13px;
 }
 
+@media only screen and (max-width: 400px) {
+  .announcement {
+    padding: 9px 0px;
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
 // NAVIGATION
 .nav-container.active {
   background-color: #fff;
   box-shadow: 1px 1px 10px #dbdbdb;
   top: 30px;
 
-  // transform: translate(0, 0);
   .search-container {
     background-color: #fff;
   }
@@ -51,19 +58,13 @@ html {
   position: sticky;
   top: 0;
   z-index: 20;
-  // transform: translate(0, -10vh);
   transition: 0.2s linear;
-
-  &:hover {
-    // background-color: #fff;
-  }
 
   .nav-row {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   .nav-col-1 {
@@ -71,8 +72,6 @@ html {
     display: flex;
     align-items: center;
   }
-
-
 
   .menu-item {
     text-decoration: none;
@@ -118,6 +117,10 @@ html {
     cursor: pointer;
     margin-left: 40px;
   }
+}
+
+.hamburger {
+  display: none;
 }
 
 .modal {
@@ -174,6 +177,44 @@ html {
 
 .search-open.search-close {
   position: fixed;
+}
+
+@media only screen and (max-width: 760px) {
+
+  .nav-container .nav-row .nav-col-left {
+    flex: 1;
+    display: flex;
+  }
+
+  .nav-container .nav-row .nav-col-2 {
+    display: none;
+  }
+
+  .nav-col-1 {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: flex;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+
+  .nav-container .nav-row .nav-col-3 {
+
+    margin-right: 15px;
+
+    .menu-item {
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 25px;
+    }
+    .menu-item:nth-last-child(1) {
+      display: none;
+    }
+  }
 }
 
 // SLIDER
@@ -263,6 +304,131 @@ html {
   }
 }
 
+@media only screen and (max-width: 1440px) {
+  .slide {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+  
+    .img-container {
+      width: 70%;
+      height: 70%;
+      padding: 30px;
+      flex: 1;
+      object-fit: contain;
+    }
+  
+    .info-container {
+      width: 100%;
+      height: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      transition: ease-out 1s;
+
+      h1 {
+        font-size: 50px;
+      }
+  
+      p {
+        margin: 30px 0;
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+    }
+}
+}
+
+@media only screen and (max-width: 870px) {
+  .slide {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  
+    .img-container {
+      width: 50%;
+      height: 50%;
+      padding: 20px;
+      flex: 1;
+      object-fit: contain;
+      margin-top: 80px;
+    }
+  
+    .info-container {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 50px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: ease-out 1s;
+
+      h1 {
+        font-size: 40px;
+      }
+  
+      p {
+        margin: 15px 0;
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+    }
+}
+}
+
+@media only screen and (max-width: 560px) {
+  .slide {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  
+    .img-container {
+      width: 70%;
+      height: 70%;
+      padding: 20px;
+      flex: 1;
+      object-fit: contain;
+      margin-top: 80px;
+    }
+  
+    .info-container {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 50px;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: ease-out 1s;
+
+      h1 {
+        font-size: 30px;
+      }
+  
+      p {
+        margin: 10px 0;
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+    }
+}
+}
+
 // CATEGORIES
 .container {
   display: flex;
@@ -274,6 +440,7 @@ html {
     margin: 10px 10px 0;
     position: relative;
     overflow: hidden;
+    
   }
 
   .cat-image {
@@ -698,14 +865,11 @@ html {
     background-color: lightgreen;
     opacity: 0.6;
     cursor: pointer;
+    transition: 0.5s all;
     
     &:hover {
       opacity: 1;
       transform: scale(1.1);
     }
   }
-}
-
-.btn-up .btn-hidden {
-  display: none;
 }

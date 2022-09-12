@@ -11,7 +11,6 @@ function SelectedProduct() {
 
   const selectSize = (e) => {
     setSize(e.target.value);
-    console.log(localStorage.category);
   };
 
   return (
