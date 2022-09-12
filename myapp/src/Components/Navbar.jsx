@@ -4,13 +4,11 @@ import { GrSearch, GrCart } from 'react-icons/gr';
 import { RiAccountCircleLine, RiCloseFill } from 'react-icons/ri';
 import { CgMenu, CgMenuMotion } from 'react-icons/cg';
 import { NavLink } from "react-router-dom";
-import MobieNav from "./MobieNav";
 
 function Navbar() {
 
   const [navbar, setNavbar] = useState(false);
   const [searchToggle, setSearchToggle] = useState(true);
-
   const [open, setOpen] = useState(false);
 
   const changeBackground = () => {
@@ -24,30 +22,38 @@ function Navbar() {
   window.addEventListener('scroll', changeBackground);
 
   const click = () => {
-    setSearchToggle(!searchToggle && (document.body.style.overflow = "hidden"))
+    setSearchToggle(!searchToggle)
     }
   
   const close = () => {
-    setSearchToggle(!searchToggle && (document.body.style.overflow = "visible"))
+    setSearchToggle(!searchToggle)
   }
     
   useEffect(() => {
     setTimeout(3000);
   }, [setSearchToggle])
 
+  useEffect(() => {
+    if (!open && searchToggle) {
+      document.getElementsByTagName('body')[0].style = 'overflow-y: scroll'
+    } else {
+      document.getElementsByTagName('body')[0].style = 'overflow-y: hidden'
+    }
+  })
+
   return (
     <div className={navbar ? 'nav-container active' : 'nav-container'}>
       <div className="nav-row">
         <div className="nav-col-left">
           {
-            !open ? <CgMenu className="hamburger" onClick={() => setOpen(!open)} /> :
+            !open ? <CgMenu className="hamburger" onClick={() => setOpen(!open)} /> : 
             <CgMenuMotion className="hamburger" onClick={() => setOpen(!open)} />
           }
         </div>
         <div className="nav-col-1">
           <NavLink to="/" className="menu-item"><h1>LOGO.</h1></NavLink>
         </div>
-        <div className={!open ? 'nav-col-2' : 'nav-col-2 nav-mobile'}>
+        <div className={!open ? 'nav-col-2 nav-mobile-closed' : 'nav-col-2 nav-mobile'}>
             <NavLink to="/productlist/mens" className="menu-item" style={({ isActive }) =>
                         isActive ? {
                             color: 'crimson',
