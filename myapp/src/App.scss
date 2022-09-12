@@ -205,12 +205,12 @@ html {
     flex-direction: column;
     position: absolute;
     top: 90px;
-    right: 120%;    
+    right: 120%;
     padding: 30px;
     width: 100%;
     background-color: #fff;
     transition: 0.8s ease-in-out;
-    
+
     .menu-item {
       padding: 10px;
     }
@@ -219,7 +219,7 @@ html {
   .nav-container .nav-row .nav-mobile {
     position: absolute;
     top: 90px;
-    right: 0;    
+    right: 0;
     padding: 30px;
     background-color: #fff;
     width: 100%;
@@ -231,8 +231,9 @@ html {
 
     .menu-item {
       padding: 10px;
+
       &:hover {
-        color: #777;
+        color: #ffcd00;
       }
     }
   }
@@ -474,34 +475,29 @@ html {
   }
 }
 
-.links {
-  position: absolute;
-  top: 100px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  padding: 100px;
-  background-color: #fff;
-  border: 1px solid black;
-  box-sizing: border-box;
-  transition: 2s linear;
-}
-
 // CATEGORIES
 .container {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  // flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 20px;
 
   .category-block {
     flex: 1;
-    margin: 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 30px 10px 15px;
     position: relative;
     overflow: hidden;
-
   }
 
   .cat-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
     transition: all 5s;
     overflow: hidden;
   }
@@ -548,6 +544,41 @@ html {
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .container {
+
+    button {
+      font-size: 16px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    
+
+    .category-block {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+      margin: 15px 20px;
+    }
+  }
+}
+
+
 
 // PRODUCTS
 .pr-container {
@@ -730,7 +761,7 @@ html {
   background-color: papayawhip;
   width: 100%;
   height: 50vh;
-  
+
 
   h1 {
     font-size: 50px;
