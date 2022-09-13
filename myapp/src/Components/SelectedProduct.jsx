@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { FilterColor } from "./StyledComponents";
 
 function SelectedProduct() {
-
   const [color, setColor] = useState("Color");
   const [size, setSize] = useState("Size");
 
@@ -12,6 +12,19 @@ function SelectedProduct() {
   const selectSize = (e) => {
     setSize(e.target.value);
   };
+
+  const addToCart = () => {
+    const data = {
+      id: localStorage.id,
+      title: localStorage.title,
+      category: localStorage.category,
+      price: localStorage.price,
+      img: JSON.parse(localStorage.img),
+      color: color,
+      size: size
+    }
+    localStorage.setItem('cart_item', JSON.stringify(data));
+  }
 
   return (
     <div className="sel-container">
@@ -64,20 +77,20 @@ function SelectedProduct() {
           <div
             className="col-size"
             style={
-              color === "Color" ? { display: "none" } : { display: "block" }
+              color === "Color" ? { display: "none" } : { display: "flex" }
             }
           >
             Selected color:{" "}
-            <b>{color[0].toUpperCase() + color.slice(1).toLowerCase()}</b>
+            <FilterColor className="filter-color" color={color} />
           </div>
           <div
             className="col-size"
-            style={size === "Size" ? { display: "none" } : { display: "block" }}
+            style={size === "Size" ? { display: "none" } : { display: "flex" }}
           >
-            Selected size: <b>{size}</b>
+            Selected size:<b style={{ marginLeft: "5px" }}>{size}</b>
           </div>
           <div className="col-size">
-            <button>ADD TO CART</button>
+            <button onClick={addToCart}>ADD TO CART</button>
           </div>
         </div>
       </div>

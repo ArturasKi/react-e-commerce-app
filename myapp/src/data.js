@@ -110,6 +110,7 @@ export const products = [
         category: 'pants',
         price: '49.99 EUR',
         img: pr_shorts,
+        color: ['red', 'blue', 'green']
     },
     {
         id: 7,
