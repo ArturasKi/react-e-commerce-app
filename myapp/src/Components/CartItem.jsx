@@ -8,6 +8,8 @@ function CartItem({item}) {
 
   const [count, setCount] = useState(1);
 
+  console.log((item.price).slice(0, -4))
+
   const handleRemove = () => {
     setDeleteItem(item);
   };
@@ -32,6 +34,7 @@ function CartItem({item}) {
               <p>Color: {item.color}</p>
               <p>Size: {item.size}</p>
               <p>Price: {item.price}</p>
+              <p>Total price: {((item.price.slice(0, -4)) * JSON.stringify(item.amount)).toFixed(2)} EUR</p>
               <div>
                 <button className="cart-btn" onClick={minusCount}>-</button>
                 <b style={{padding: '10px'}}>{item.amount ? item.amount : count}</b>
