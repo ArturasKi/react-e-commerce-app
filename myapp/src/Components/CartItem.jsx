@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function CartProduct() {
+function CartItem({item}) {
 
   const [count, setCount] = useState(1);
 
-  let cart = JSON.parse(localStorage.getItem("cart_item"));
+  // let cart = JSON.parse(localStorage.getItem("cart_item"));
 
   const removeItem = () => {
     localStorage.removeItem("cart_item");
@@ -22,17 +22,17 @@ function CartProduct() {
 
   return (
     <div className="cart-container">
-      {cart ? (
+      {item ? (
         <div className="cart-row">
-          <img src={cart ? cart.img : null} alt="." />
+          <img src={item.img} alt="." />
           <div className="cart-info">
-              <h2>{cart ? cart.title : null}</h2>
-              <p>Color: {cart ? cart.color : null}</p>
-              <p>Size: {cart ? cart.size : null}</p>
-              <p>Price: {cart ? cart.price : null}</p>
+              <h2>{item.title}</h2>
+              <p>Color: {item.color}</p>
+              <p>Size: {item.size}</p>
+              <p>Price: {item.price}</p>
               <div className="amount">
                 <button onClick={minusCount}>-</button>
-                <b style={{padding: '10px'}}>{count}</b>
+                <b style={{padding: '10px'}}>{item.amount ? item.amount : count}</b>
                 <button onClick={plusCount}>+</button>
               </div>
               <button onClick={removeItem}>Remove item</button>
@@ -45,4 +45,4 @@ function CartProduct() {
   );
 }
 
-export default CartProduct;
+export default CartItem;

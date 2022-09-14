@@ -1,7 +1,12 @@
+import { useContext } from "react";
 import { useState } from "react";
+import AppContext from "./AppContext";
 import { FilterColor } from "./StyledComponents";
 
 function SelectedProduct() {
+
+  const { setCreateItem } = useContext(AppContext);
+
   const [color, setColor] = useState("Color");
   const [size, setSize] = useState("Size");
   const [count, setCount] = useState(1);
@@ -22,11 +27,13 @@ function SelectedProduct() {
       price: localStorage.price,
       img: JSON.parse(localStorage.img),
       color: color,
-      size: size
+      size: size,
+      amount: count
     }
     setColor('Color');
     setSize('Size');
-    localStorage.setItem('cart_item', JSON.stringify(data));
+    setCount(1);
+    setCreateItem(data);
   }
 
   const minusCount = () => {

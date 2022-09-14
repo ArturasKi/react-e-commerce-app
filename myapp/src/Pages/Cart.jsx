@@ -1,5 +1,5 @@
 import Announcement from '../Components/Announcement';
-import CartProduct from '../Components/CartProduct';
+import CartList from '../Components/CartList';
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 import Newsletter from '../Components/Newsletter';
@@ -10,7 +10,7 @@ function Cart() {
     <div>
         <Announcement />
         <Navbar />
-        <CartProduct />
+        <CartList />
         <Newsletter />
         <Footer />
     </div>
