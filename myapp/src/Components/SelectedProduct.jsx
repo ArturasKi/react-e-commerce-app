@@ -4,6 +4,7 @@ import { FilterColor } from "./StyledComponents";
 function SelectedProduct() {
   const [color, setColor] = useState("Color");
   const [size, setSize] = useState("Size");
+  const [count, setCount] = useState(1);
 
   const selectColor = (e) => {
     setColor(e.target.value);
@@ -23,7 +24,19 @@ function SelectedProduct() {
       color: color,
       size: size
     }
+    setColor('Color');
+    setSize('Size');
     localStorage.setItem('cart_item', JSON.stringify(data));
+  }
+
+  const minusCount = () => {
+    if(count > 1) {
+      setCount(count => count - 1);
+    }
+  }
+
+  const plusCount = () => {
+    setCount(count => count + 1);
   }
 
   return (
@@ -88,6 +101,11 @@ function SelectedProduct() {
             style={size === "Size" ? { display: "none" } : { display: "flex" }}
           >
             Selected size:<b style={{ marginLeft: "5px" }}>{size}</b>
+          </div>
+          <div className="amount">
+            <button onClick={minusCount}>-</button>
+            <h2 style={{padding: '10px'}}>{count}</h2>
+            <button onClick={plusCount}>+</button>
           </div>
           <div className="col-size">
             <button onClick={addToCart}>ADD TO CART</button>
