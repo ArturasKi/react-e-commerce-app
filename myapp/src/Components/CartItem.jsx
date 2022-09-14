@@ -8,8 +8,6 @@ function CartItem({item}) {
 
   const [count, setCount] = useState(1);
 
-  // let cart = JSON.parse(localStorage.getItem("cart_item"));
-
   const handleRemove = () => {
     setDeleteItem(item);
   };

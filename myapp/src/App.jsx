@@ -16,12 +16,18 @@ import { create, read, remove, edit } from "./Functions/localStorage";
 function App() {
   const [lastUpdate, setLastUpdate] = useState(Date.now());
   const [items, setItems] = useState(null);
+  const [item, setItem] = useState(null);
   const [createItem, setCreateItem] = useState(null);
   const [deleteItem, setDeleteItem] = useState(null);
 
   // READ
   useEffect(() => {
     setItems(read());
+  }, [lastUpdate]);
+
+  // READ
+  useEffect(() => {
+    setItem(read());
   }, [lastUpdate]);
 
   // CREATE
@@ -48,7 +54,8 @@ function App() {
         products,
         items,
         setCreateItem,
-        setDeleteItem
+        setDeleteItem,
+        item
       }}
     >
       <BrowserRouter>
