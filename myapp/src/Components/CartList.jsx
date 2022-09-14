@@ -26,9 +26,8 @@ function CartList() {
           {items
             ? items
                 .reduce((total, item) => total + +(item.price * item.amount), 0)
-                .toFixed(2)
-            : null}{" "}
-          EUR
+                .toFixed(2) + ' EUR'
+            : null}
         </p>
         <p>Shipping & taxes calculated at checkout</p>
         <div style={{ display: "flex" }}>
