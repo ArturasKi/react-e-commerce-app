@@ -4,8 +4,22 @@ import { GrSearch, GrCart } from 'react-icons/gr';
 import { RiAccountCircleLine, RiCloseFill } from 'react-icons/ri';
 import { CgMenu, CgMenuMotion } from 'react-icons/cg';
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import AppContext from "./AppContext";
 
 function Navbar() {
+
+  const { cartItems } = useContext(AppContext);
+
+  let allItems = 0;
+
+  for(let i = 0; i < cartItems.length; i++) {
+    if(cartItems.length) {
+      allItems += cartItems[i].amount;
+    }
+  }
+
+  console.log(allItems);
 
   const [navbar, setNavbar] = useState(false);
   const [searchToggle, setSearchToggle] = useState(true);
@@ -86,7 +100,7 @@ function Navbar() {
                             color: 'crimson',
                             fontWeight: 'bold'
                         } : undefined
-                        }><GrCart /></NavLink>
+                        }><GrCart /><b style={{color: 'crimson'}}> {allItems}</b></NavLink>
             <NavLink to="/account" className="menu-item" style={({ isActive }) =>
                         isActive ? {
                             color: 'crimson',

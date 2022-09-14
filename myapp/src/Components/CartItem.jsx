@@ -8,8 +8,6 @@ function CartItem({item}) {
 
   const [count, setCount] = useState(1);
 
-  console.log((item.price).slice(0, -4))
-
   const handleRemove = () => {
     setDeleteItem(item);
   };

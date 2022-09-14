@@ -8,7 +8,6 @@ function ProductMens({ product }) {
     localStorage.setItem("price", product.price);
     localStorage.setItem("category", product.category);
     localStorage.setItem("img", JSON.stringify(product.img));
-    console.log(product.id);
   };
 
   return (

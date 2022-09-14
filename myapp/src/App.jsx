@@ -16,18 +16,15 @@ import { create, read, remove, edit } from "./Functions/localStorage";
 function App() {
   const [lastUpdate, setLastUpdate] = useState(Date.now());
   const [items, setItems] = useState(null);
-  const [item, setItem] = useState(null);
   const [createItem, setCreateItem] = useState(null);
   const [deleteItem, setDeleteItem] = useState(null);
+  const [editItem, setEditItem] = useState(null);
+
+  const cartItems = JSON.parse(localStorage.getItem("cartItems"));
 
   // READ
   useEffect(() => {
     setItems(read());
-  }, [lastUpdate]);
-
-  // READ
-  useEffect(() => {
-    setItem(read());
   }, [lastUpdate]);
 
   // CREATE
@@ -47,6 +44,15 @@ function App() {
     remove(deleteItem);
     setLastUpdate(Date.now());
   }, [deleteItem]);
+  
+  // EDIT
+  useEffect(() => {
+    if (null === editItem) {
+      return;
+    }
+    edit(editItem);
+    setLastUpdate(Date.now());
+  }, [editItem]);
 
   return (
     <AppContext.Provider
@@ -55,7 +61,8 @@ function App() {
         items,
         setCreateItem,
         setDeleteItem,
-        item
+        setEditItem,
+        cartItems
       }}
     >
       <BrowserRouter>

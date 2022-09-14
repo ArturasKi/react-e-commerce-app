@@ -4,16 +4,21 @@ import AppContext from "./AppContext";
 import CartItem from "./CartItem";
 
 function CartList() {
-  const { items } = useContext(AppContext);
+  const { items, cartItems } = useContext(AppContext);
 
-  const prices = JSON.parse(localStorage.getItem("cartItems"));
+  let allCost = 0;
+  for(let i = 0; i < cartItems.length; i++) {
+    if(cartItems.length) {
+    allCost += (cartItems[i].price.slice(0, -4) * cartItems[i].amount);
+    }
+  }
 
-  console.log(prices);
+  console.log(allCost);
 
   return (
     <div className="cart">
       <div className="cart-header">
-        <h2>Cart</h2>
+        <h2>{allCost ? 'Cart' : 'Your cart is empty'}</h2>
       </div>
       <div className="cart-list">
         {items
@@ -23,11 +28,7 @@ function CartList() {
       <div className="bottom-info">
         <p>
           Total price:
-          {items
-            ? items
-                .reduce((total, item) => total + +(item.price * item.amount), 0)
-                .toFixed(2) + ' EUR'
-            : null}
+          <b>{allCost ? ' ' + allCost.toFixed(2) + ' EUR' : ' Your cart is empty'}</b>
         </p>
         <p>Shipping & taxes calculated at checkout</p>
         <div style={{ display: "flex" }}>
