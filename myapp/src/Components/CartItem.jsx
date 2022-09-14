@@ -1,13 +1,17 @@
+import { useContext } from "react";
 import { useState } from "react";
+import AppContext from "./AppContext";
 
 function CartItem({item}) {
+
+  const { setDeleteItem } = useContext(AppContext);
 
   const [count, setCount] = useState(1);
 
   // let cart = JSON.parse(localStorage.getItem("cart_item"));
 
-  const removeItem = () => {
-    localStorage.removeItem("cart_item");
+  const handleRemove = () => {
+    setDeleteItem(item);
   };
 
   const minusCount = () => {
@@ -26,16 +30,16 @@ function CartItem({item}) {
         <div className="cart-row">
           <img src={item.img} alt="." />
           <div className="cart-info">
-              <h2>{item.title}</h2>
+              <h4>{item.title}</h4>
               <p>Color: {item.color}</p>
               <p>Size: {item.size}</p>
               <p>Price: {item.price}</p>
-              <div className="amount">
-                <button onClick={minusCount}>-</button>
+              <div>
+                <button className="cart-btn" onClick={minusCount}>-</button>
                 <b style={{padding: '10px'}}>{item.amount ? item.amount : count}</b>
-                <button onClick={plusCount}>+</button>
+                <button className="cart-btn" onClick={plusCount}>+</button>
               </div>
-              <button onClick={removeItem}>Remove item</button>
+              <button className="cart-btn" onClick={handleRemove}>Remove item</button>
             </div>
         </div>
       ) : (

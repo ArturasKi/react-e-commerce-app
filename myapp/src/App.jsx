@@ -17,6 +17,7 @@ function App() {
   const [lastUpdate, setLastUpdate] = useState(Date.now());
   const [items, setItems] = useState(null);
   const [createItem, setCreateItem] = useState(null);
+  const [deleteItem, setDeleteItem] = useState(null);
 
   // READ
   useEffect(() => {
@@ -30,15 +31,24 @@ function App() {
     }
     create(createItem);
     setLastUpdate(Date.now());
-    // IŠSIUNČIAMAS Į LOCALSTORAGE;
   }, [createItem]);
+
+   // DELETE
+   useEffect(() => {
+    if (null === deleteItem) {
+      return;
+    }
+    remove(deleteItem);
+    setLastUpdate(Date.now());
+  }, [deleteItem]);
 
   return (
     <AppContext.Provider
       value={{
         products,
         items,
-        setCreateItem
+        setCreateItem,
+        setDeleteItem
       }}
     >
       <BrowserRouter>
