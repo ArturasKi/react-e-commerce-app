@@ -1,18 +1,18 @@
 import { useContext } from "react";
 import { useState } from "react";
 import AppContext from "./AppContext";
-import { FilterColor } from "./StyledComponents";
+// import { FilterColor } from "./StyledComponents";
 
 function SelectedProduct() {
-
   const { setCreateItem } = useContext(AppContext);
 
-  const [color, setColor] = useState("Color");
+  const [color, setColor] = useState("");
   const [size, setSize] = useState("Size");
   const [count, setCount] = useState(1);
 
   const selectColor = (e) => {
-    setColor(e.target.value);
+    setColor(e.target.style.backgroundColor);
+    console.log(e.target.style.backgroundColor);
   };
 
   const selectSize = (e) => {
@@ -28,23 +28,23 @@ function SelectedProduct() {
       img: JSON.parse(localStorage.img),
       color: color,
       size: size,
-      amount: count
-    }
-    setColor('Color');
-    setSize('Size');
+      amount: count,
+    };
+    setColor("");
+    setSize("Size");
     setCount(1);
     setCreateItem(data);
-  }
+  };
 
   const minusCount = () => {
-    if(count > 1) {
-      setCount(count => count - 1);
+    if (count > 1) {
+      setCount((count) => count - 1);
     }
-  }
+  };
 
   const plusCount = () => {
-    setCount(count => count + 1);
-  }
+    setCount((count) => count + 1);
+  };
 
   return (
     <div className="sel-container">
@@ -61,13 +61,21 @@ function SelectedProduct() {
           <h4>Price: {localStorage.price}</h4>
         </div>
         <div className="col-size">
-          <h5>Color:</h5>
-          <select onChange={selectColor} value={color}>
-            <option value="Color">Color</option>
-            <option value="red">Red</option>
-            <option value="brown">Brown</option>
-            <option value="green">Green</option>
-          </select>
+          <h5>
+            Color:
+            <div className="color-row">
+              {localStorage.color
+                ? JSON.parse(localStorage.color).map((color, index) => (
+                    <div
+                      className="colors"
+                      style={{ backgroundColor: color }}
+                      key={index}
+                      onClick={selectColor} 
+                    ></div>
+                  ))
+                : null}
+            </div>
+          </h5>
           <h5>Size:</h5>
           {localStorage.category === "shoes" ? (
             <select onChange={selectSize} value={size}>
@@ -96,22 +104,19 @@ function SelectedProduct() {
           )}
           <div
             className="col-size"
-            style={
-              color === "Color" ? { display: "none" } : { display: "flex" }
-            }
+            style={color === "" ? { display: "none" } : { display: "block" }}
           >
-            Selected color:{" "}
-            <FilterColor className="filter-color" color={color} />
+            Selected color:<b>{" " + color.toUpperCase()}</b>
           </div>
           <div
             className="col-size"
-            style={size === "Size" ? { display: "none" } : { display: "flex" }}
+            style={size === "Size" ? { display: "none" } : { display: "block" }}
           >
-            Selected size:<b style={{ marginLeft: "5px" }}>{size}</b>
+            Selected size:<b>{" " + size}</b>
           </div>
           <div className="amount">
             <button onClick={minusCount}>-</button>
-            <h2 style={{padding: '10px'}}>{count}</h2>
+            <h2 style={{ padding: "10px", width: '30px', textAlign: 'center' }}>{count}</h2>
             <button onClick={plusCount}>+</button>
           </div>
           <div className="col-size">

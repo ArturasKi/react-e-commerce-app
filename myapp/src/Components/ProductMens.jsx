@@ -31,7 +31,7 @@ function ProductMens({ product }) {
   const heartBtn = () => {
     if(!like) {
       setLike(true);
-    }
+    } else setLike(false);
   }
 
   const sayYes = () => {
@@ -48,6 +48,7 @@ function ProductMens({ product }) {
     localStorage.setItem("price", product.price);
     localStorage.setItem("category", product.category);
     localStorage.setItem("img", JSON.stringify(product.img));
+    localStorage.setItem("color", JSON.stringify(product.color));
   };
 
   return (

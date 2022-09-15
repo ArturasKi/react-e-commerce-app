@@ -29,7 +29,7 @@ function CartItem({item}) {
           <img src={item.img} alt="." />
           <div className="cart-info">
               <h4>{item.title}</h4>
-              <p>Color: {item.color}</p>
+              <p>Color: {(item.color).toUpperCase()}</p>
               <p>Size: {item.size}</p>
               <p>Price: {item.price}</p>
               <p>Total price: {((item.price.slice(0, -4)) * JSON.stringify(item.amount)).toFixed(2) + ' EUR'}</p>
