@@ -70,7 +70,7 @@ function SelectedProduct() {
                       className="colors"
                       style={{ backgroundColor: color }}
                       key={index}
-                      onClick={selectColor} 
+                      onClick={selectColor}
                     ></div>
                   ))
                 : null}
@@ -116,7 +116,9 @@ function SelectedProduct() {
           </div>
           <div className="amount">
             <button onClick={minusCount}>-</button>
-            <h2 style={{ padding: "10px", width: '30px', textAlign: 'center' }}>{count}</h2>
+            <h2 style={{ padding: "10px", width: "30px", textAlign: "center" }}>
+              {count}
+            </h2>
             <button onClick={plusCount}>+</button>
           </div>
           <div className="col-size">

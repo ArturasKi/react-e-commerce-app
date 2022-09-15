@@ -12,6 +12,7 @@ import Cart from "./Pages/Cart";
 import Sale from "./Pages/Sale";
 import { useEffect, useState } from "react";
 import { create, read, remove, edit } from "./Functions/localStorage";
+import BlogReading from "./Pages/BlogReading";
 
 function App() {
   const [lastUpdate, setLastUpdate] = useState(Date.now());
@@ -74,6 +75,7 @@ function App() {
           <Route path="/productlist/womens" element={<ProductListWomens />} />
           <Route path="/productlist/womens/product" element={<ProductPage />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/reading" element={<BlogReading />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/sale" element={<Sale />} />
         </Routes>

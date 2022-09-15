@@ -29,20 +29,12 @@ function ProductMens({ product }) {
   };
 
   const heartBtn = () => {
-    if(!like) {
+    if (!like) {
       setLike(true);
     } else setLike(false);
-  }
+  };
 
   const sayYes = () => {
-    // const data = {
-    //   id: product.id,
-    //   title: product.title,
-    //   price: product.price,
-    //   category: product.category,
-    //   img: JSON.stringify(product.img)
-    // }
-    // localStorage.setItem("selectedItem", JSON.stringify(data));
     localStorage.setItem("id", product.id);
     localStorage.setItem("title", product.title);
     localStorage.setItem("price", product.price);
@@ -60,7 +52,15 @@ function ProductMens({ product }) {
           <FiShoppingCart onClick={addToCart} />
         </div>
         <div className="icon">
-          {like === true ? <FiHeart style={{fill: 'black'}} values={like} onClick={heartBtn} /> : <FiHeart values={like} onClick={heartBtn} />}
+          {like === true ? (
+            <FiHeart
+              style={{ fill: "black" }}
+              values={like}
+              onClick={heartBtn}
+            />
+          ) : (
+            <FiHeart values={like} onClick={heartBtn} />
+          )}
         </div>
         <div className="icon">
           <NavLink to="/productlist/mens/product" className="menu-item">
