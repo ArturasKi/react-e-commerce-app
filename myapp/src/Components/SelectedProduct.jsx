@@ -25,6 +25,7 @@ function SelectedProduct() {
       title: localStorage.title,
       category: localStorage.category,
       price: localStorage.price,
+      sale: localStorage.sale,
       img: JSON.parse(localStorage.img),
       color: color,
       size: size,

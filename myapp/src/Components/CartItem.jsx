@@ -31,8 +31,8 @@ function CartItem({item}) {
               <h4>{item.title}</h4>
               <p>Color: {(item.color).toUpperCase()}</p>
               <p>Size: {item.size}</p>
-              <p>Price: {item.price}</p>
-              <p>Total price: {((item.price.slice(0, -4)) * JSON.stringify(item.amount)).toFixed(2) + ' EUR'}</p>
+              <p>Price: {item.sale === '1' ? ((item.price).slice(0, -4) / 2).toFixed(2) + ' EUR' : item.price}</p>
+              <p>Total price: {item.sale === '1' ? ((item.price.slice(0, -4) / 2).toFixed(2) * JSON.stringify(item.amount)).toFixed(2) + ' EUR' : ((item.price.slice(0, -4)) * JSON.stringify(item.amount)).toFixed(2) + ' EUR'}</p>
               <div>
                 <button className="cart-btn" onClick={minusCount}>-</button>
                 <b style={{padding: '10px'}}>{item.amount ? item.amount : count}</b>
