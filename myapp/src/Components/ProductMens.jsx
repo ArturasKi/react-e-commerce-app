@@ -46,6 +46,7 @@ function ProductMens({ product }) {
   return (
     <div className="products">
       <img className="pr-images" src={product.img} alt="" />
+      <div className={product.sale === 1 ? "sale" : "hidden"}>SALE</div>
       {like === true ? <FiHeart className="heart" /> : null}
       <div className="info">
         <div className="icon">

@@ -75,7 +75,8 @@ export const products = [
         category: 'shoes',
         price: '299.00 EUR',
         img: pr_shoes1,
-        color: ['black', 'brown', 'olive', 'burlywood']
+        color: ['black', 'brown', 'olive', 'burlywood'],
+        sale: 0
     },
     {
         id: 2,
@@ -83,7 +84,8 @@ export const products = [
         category: 'pants',
         price: '129.00 EUR',
         img: pr_jeans1,
-        color: ['blue', 'navy', 'black', 'lightblue']
+        color: ['blue', 'navy', 'black', 'lightblue'],
+        sale: 0
     },
     {
         id: 3,
@@ -91,7 +93,8 @@ export const products = [
         category: 'accessories',
         price: '19.00 EUR',
         img: pr_cap1,
-        color: ['black', 'blue', 'gray']
+        color: ['black', 'blue', 'gray'],
+        sale: 0
     },
     {
         id: 4,
@@ -99,7 +102,8 @@ export const products = [
         category: 'sweaters',
         price: '69.99 EUR',
         img: pr_sweater1,
-        color: ['black', 'white', 'gray']
+        color: ['black', 'white', 'gray'],
+        sale: 1
     },
     {
         id: 5,
@@ -107,7 +111,8 @@ export const products = [
         category: 'jackets',
         price: '155.99 EUR',
         img: pr_jacket1,
-        color: ['black', 'orange', 'brown']
+        color: ['black', 'orange', 'brown'],
+        sale: 0
     },
     {
         id: 6,
@@ -115,7 +120,8 @@ export const products = [
         category: 'pants',
         price: '49.99 EUR',
         img: pr_shorts,
-        color: ['navy', 'white', 'rosybrown']
+        color: ['navy', 'white', 'rosybrown'],
+        sale: 1
     },
     {
         id: 7,
@@ -123,7 +129,8 @@ export const products = [
         category: 'shirts',
         price: '35.99 EUR',
         img: pr_shirt1,
-        color: ['green', 'coral', 'olive']
+        color: ['green', 'coral', 'olive'],
+        sale: 1
     },
     {
         id: 8,
@@ -131,7 +138,8 @@ export const products = [
         category: 'tshirts',
         price: '24.99 EUR',
         img: pr_tshirt1,
-        color: ['blue', 'black', 'darkolivegreen', 'goldenrod']
+        color: ['blue', 'black', 'darkolivegreen', 'goldenrod'],
+        sale: 1
     },
     {
         id: 9,
@@ -139,7 +147,8 @@ export const products = [
         category: 'shoes',
         price: '329.00 EUR',
         img: pr_shoes2,
-        color: ['black', 'brown', 'olive']
+        color: ['black', 'brown', 'olive'],
+        sale: 0
     },
     {
         id: 10,
@@ -147,7 +156,8 @@ export const products = [
         category: 'shoes',
         price: '319.00 EUR',
         img: pr_shoes3,
-        color: ['black', 'brown', 'olive', 'chocolate', 'slategrey']
+        color: ['black', 'brown', 'olive', 'chocolate', 'slategrey'],
+        sale: 0
     },
     {
         id: 11,
@@ -155,7 +165,8 @@ export const products = [
         category: 'pants',
         price: '100.00 EUR',
         img: pr_jeans2,
-        color: ['black', 'navy', 'slategrey']
+        color: ['black', 'navy', 'slategrey'],
+        sale: 0
     },
     {
         id: 12,
@@ -163,7 +174,8 @@ export const products = [
         category: 'pants',
         price: '89.99 EUR',
         img: pr_jeans3,
-        color: ['black', 'navy', 'midnightblue']
+        color: ['black', 'navy', 'midnightblue'],
+        sale: 0
     },
     {
         id: 13,
@@ -171,7 +183,8 @@ export const products = [
         category: 'jackets',
         price: '120.00 EUR',
         img: pr_jacket2,
-        color: ['black', 'midnightblue', 'whitesmoke']
+        color: ['black', 'midnightblue', 'whitesmoke'],
+        sale: 0
     },
     {
         id: 14,
@@ -179,7 +192,8 @@ export const products = [
         category: 'jackets',
         price: '150.00 EUR',
         img: pr_jacket3,
-        color: ['black', 'brown']
+        color: ['black', 'brown'],
+        sale: 0
     },
     {
         id: 15,
@@ -187,7 +201,8 @@ export const products = [
         category: 'shirts',
         price: '49.00 EUR',
         img: pr_shirt2,
-        color: ['brown', 'olive']
+        color: ['brown', 'olive'],
+        sale: 0
     },
     {
         id: 16,
@@ -195,7 +210,8 @@ export const products = [
         category: 'shirts',
         price: '33.00 EUR',
         img: pr_shirt3,
-        color: ['mediumaquamarine']
+        color: ['mediumaquamarine'],
+        sale: 1
     },
     {
         id: 17,
@@ -203,7 +219,8 @@ export const products = [
         category: 'sweaters',
         price: '59.99 EUR',
         img: pr_sweater2,
-        color: ['darkblue', 'darkgreen', 'darkgray']
+        color: ['darkblue', 'darkgreen', 'darkgray'],
+        sale: 0
     },
     {
         id: 18,
@@ -211,7 +228,8 @@ export const products = [
         category: 'sweaters',
         price: '49.99 EUR',
         img: pr_sweater3,
-        color: ['orange', 'darkolivegreen']
+        color: ['orange', 'darkolivegreen'],
+        sale: 0
     },
     {
         id: 19,
@@ -219,7 +237,8 @@ export const products = [
         category: 'tshirts',
         price: '29.99 EUR',
         img: pr_tshirt2,
-        color: ['darkblue', 'black', 'orange']
+        color: ['darkblue', 'black', 'orange'],
+        sale: 1
     },
     {
         id: 20,
@@ -227,7 +246,8 @@ export const products = [
         category: 'tshirts',
         price: '32.99 EUR',
         img: pr_tshirt3,
-        color: ['black', 'white', 'chocolate', 'aquamarine', 'thistle']
+        color: ['black', 'white', 'chocolate', 'aquamarine', 'thistle'],
+        sale: 1
     },
     {
         id: 21,
@@ -235,7 +255,8 @@ export const products = [
         category: 'accessories',
         price: '32.99 EUR',
         img: pr_cap2,
-        color: ['black', 'navy', 'olive', 'darkgrey']
+        color: ['black', 'navy', 'olive', 'darkgrey'],
+        sale: 0
     },
     {
         id: 22,
@@ -243,7 +264,8 @@ export const products = [
         category: 'accessories',
         price: '32.99 EUR',
         img: pr_cap3,
-        color: ['black', 'navy', 'olive', 'darkgrey']
+        color: ['black', 'navy', 'olive', 'darkgrey'],
+        sale: 0
     },
     {
         id: 23,
@@ -251,7 +273,8 @@ export const products = [
         category: 'accessories',
         price: '32.99 EUR',
         img: pr_cap4,
-        color: ['black', 'navy', 'olive', 'darkgrey']
+        color: ['black', 'navy', 'olive', 'darkgrey'],
+        sale: 1
     },
     {
         id: 24,
@@ -259,7 +282,8 @@ export const products = [
         category: 'accessories',
         price: '32.99 EUR',
         img: pr_cap5,
-        color: ['black', 'navy', 'brown', 'darkgrey', 'darkgreen']
+        color: ['black', 'navy', 'brown', 'darkgrey', 'darkgreen'],
+        sale: 0
     },
 ]
 

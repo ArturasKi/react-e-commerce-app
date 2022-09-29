@@ -599,6 +599,18 @@ html {
   position: relative;
   background-color: lavender;
 
+  .sale {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: #ffcd00;
+  }
+
+  .hidden {
+    display: none;
+  }
+
   &:hover .info {
     opacity: 1;
   }
@@ -607,8 +619,8 @@ html {
     position: absolute;
     top: 10px;
     left: 10px;
-    color: red;
-    fill: red;
+    color: #000;
+    fill: #000;
   }
 
   .pr-images {
@@ -985,15 +997,30 @@ html {
 
     select {
       padding: 10px;
+
+      option {
+        background-color: #adeeda;
+        margin: 20px;
+      }
+    }
+
+    select:nth-child(2) {
+      margin-right: 10px;
     }
   }
 
   .sort {
-    margin: 0 30px;
+    // margin: 0;
+    float: right;
 
-    select {
+    h3 {
+      margin-right: 30px;
+      text-align: end;
+    }
+
+    select:nth-child(2) {
       padding: 10px;
-      float: right;
+      margin: 0 30px 0 0;
     }
   }
 }
@@ -1004,6 +1031,7 @@ html {
   justify-content: center;
   align-items: center;
   background-color: antiquewhite;
+  // width: 100%;
 
   img {
     object-fit: contain;
@@ -1042,6 +1070,7 @@ html {
       cursor: pointer;
       text-align: center;
       border: 0.5px solid transparent;
+
       &:hover {
         border: 0.5px solid black;
         color: thistle
@@ -1133,11 +1162,12 @@ html {
 @media only screen and (max-width: 650px) {
   .sel-container {
     flex-wrap: wrap;
+    // width: 100%;
 
     img {
       height: 350px;
-      padding: 0 50px;
-      width: 90%;
+      padding: 50px;
+      width: 100%;
     }
 
     .about {
@@ -1215,7 +1245,8 @@ html {
       width: 100%;
       padding: 20px 0px;
 
-      h2, p {
+      h2,
+      p {
         margin: 5px 0;
       }
 
@@ -1238,7 +1269,7 @@ html {
       color: #fff;
       margin: 5px 0;
       max-width: 200px;
-  
+
       &:hover {
         background-color: transparent;
         color: black;
@@ -1254,6 +1285,7 @@ html {
 .cart-container:last-child {
   border-bottom: 0.5px solid #777;
 }
+
 // CART LIST
 .cart {
   display: flex;
