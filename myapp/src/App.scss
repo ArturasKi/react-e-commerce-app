@@ -599,6 +599,32 @@ html {
   position: relative;
   background-color: lavender;
 
+  .salePrice {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  .oldprice {
+    position: absolute;
+    bottom: 45px;
+    right: 10px;
+    padding: 10px;
+    text-decoration: line-through;
+  }
+
+  .price {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  .salePrice {
+    background-color: #ffcd00;
+  }
+
   .sale {
     position: absolute;
     top: 10px;
@@ -1031,7 +1057,39 @@ html {
   justify-content: center;
   align-items: center;
   background-color: antiquewhite;
+  position: relative;
   // width: 100%;
+
+  .sale {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #ffcd00;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .oldprice {
+    padding: 10px;
+    text-decoration: line-through;
+    font-size: 14px;
+  }
+
+  .price {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  .salePrice {
+    background-color: #ffcd00;
+    padding: 10px;
+    width: fit-content;
+  }
 
   img {
     object-fit: contain;

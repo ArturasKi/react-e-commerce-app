@@ -49,6 +49,7 @@ function SelectedProduct() {
   return (
     <div className="sel-container">
       <img src={JSON.parse(localStorage.img)} alt="#" />
+      <div className={localStorage.sale === "1" ? "sale" : "hidden"}>SALE</div>
       <div className="about">
         <div>
           <h2>{localStorage.title}</h2>
@@ -58,7 +59,17 @@ function SelectedProduct() {
             magni adipisci ipsa soluta placeat vitae consectetur repudiandae
             tenetur, officiis perferendis nihil.
           </p>
-          <h4>Price: {localStorage.price}</h4>
+          <h4 className={localStorage.sale === "1" ? "oldprice" : null}>
+            {localStorage.sale === "1"
+              ? "Old price " + localStorage.price
+              : null}
+          </h4>
+          <h4 className={localStorage.sale === "1" ? "salePrice" : null}>
+            Price:{" "}
+            {localStorage.sale === "1"
+              ? (localStorage.price.slice(0, -4) / 2).toFixed(2) + " EUR"
+              : localStorage.price}
+          </h4>
         </div>
         <div className="col-size">
           <h5>

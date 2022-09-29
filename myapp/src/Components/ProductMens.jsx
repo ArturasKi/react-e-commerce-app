@@ -14,6 +14,7 @@ function ProductMens({ product }) {
     localStorage.setItem("title", product.title);
     localStorage.setItem("price", product.price);
     localStorage.setItem("category", product.category);
+    localStorage.setItem("sale", product.sale);
     localStorage.setItem("img", JSON.stringify(product.img));
     const data = {
       id: localStorage.id,
@@ -24,6 +25,7 @@ function ProductMens({ product }) {
       color: "",
       size: "",
       amount: 1,
+      sale: localStorage.sale
     };
     setCreateItem(data);
   };
@@ -38,6 +40,7 @@ function ProductMens({ product }) {
     localStorage.setItem("id", product.id);
     localStorage.setItem("title", product.title);
     localStorage.setItem("price", product.price);
+    localStorage.setItem("sale", JSON.stringify(product.sale));
     localStorage.setItem("category", product.category);
     localStorage.setItem("img", JSON.stringify(product.img));
     localStorage.setItem("color", JSON.stringify(product.color));
@@ -46,7 +49,9 @@ function ProductMens({ product }) {
   return (
     <div className="products">
       <img className="pr-images" src={product.img} alt="" />
-      <div className={product.sale === 1 ? "sale" : "hidden"}>SALE</div>
+      <div className={product.sale ? "sale" : "hidden"}>SALE</div>
+      <div className={product.sale ? "salePrice" : "price"}>{product.sale ? (((product.price).slice(0, -4) / 2).toFixed(2)) + ' EUR' : product.price}</div>
+      <div className={product.sale ? "oldprice" : null}>{product.sale ? product.price : null}</div>
       {like === true ? <FiHeart className="heart" /> : null}
       <div className="info">
         <div className="icon">
