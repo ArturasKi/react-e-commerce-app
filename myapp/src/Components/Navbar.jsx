@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { GrSearch, GrCart } from "react-icons/gr";
+import { GrSearch, GrCart, GrClose } from "react-icons/gr";
 import { RiAccountCircleLine, RiCloseFill } from "react-icons/ri";
 import { CgMenu, CgMenuMotion } from "react-icons/cg";
 import { NavLink } from "react-router-dom";
@@ -20,6 +20,8 @@ function Navbar() {
       } else break;
     }
   }
+
+  window.addEventListener('resize', () => open ? setOpen(!open) : null);
 
   console.log(allItems);
 
@@ -80,6 +82,9 @@ function Navbar() {
             !open ? "nav-col-2 nav-mobile-closed" : "nav-col-2 nav-mobile"
           }
         >
+          {open ? (
+            <GrClose className="btn-close" onClick={() => setOpen(!open)} />
+          ) : null}
           <NavLink
             to="/productlist/mens"
             className="menu-item"

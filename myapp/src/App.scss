@@ -191,46 +191,73 @@ html {
   }
 
   .nav-container .nav-row .nav-col-2 {
-    display: none;
+    justify-content: center;
   }
 
   .nav-col-1 {
     flex: 1;
     justify-content: center;
+
+    .menu-item {
+      margin-left: 0;
+    }
   }
 
   .nav-container .nav-row .nav-mobile-closed {
     display: flex;
     align-items: center;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 90px;
     right: 120%;
-    padding: 30px;
     width: 100%;
+    height: 100%;
     background-color: #fff;
     transition: 0.8s ease-in-out;
+    box-shadow: 1px 1px 10px #dbdbdb;
+
+    .btn-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
 
     .menu-item {
-      padding: 10px;
+      margin: 0 0 90px 0;
     }
   }
 
   .nav-container .nav-row .nav-mobile {
-    position: absolute;
-    top: 90px;
-    right: 0;
-    padding: 30px;
-    background-color: #fff;
-    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: fixed;
+    top: 90px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
     transition: 0.8s ease-in-out;
     box-shadow: 1px 1px 10px #dbdbdb;
 
+    .btn-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
     .menu-item {
-      padding: 10px;
+      margin: 0 0 90px 0;
 
       &:hover {
         color: #ffcd00;
@@ -643,8 +670,8 @@ html {
 
   .heart {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    right: 20px;
     color: #000;
     fill: #000;
   }
