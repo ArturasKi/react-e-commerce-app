@@ -10,7 +10,7 @@ function CartList() {
   if (cartItems !== null) {
     for (let i = 0; i < cartItems.length; i++) {
       if (cartItems.length !== null) {
-        allCost += cartItems[i].price.slice(0, -4) * cartItems[i].amount;
+        allCost += cartItems[i].sale === '1' ? (cartItems[i].price.slice(0, -4) / 2) * cartItems[i].amount : cartItems[i].price.slice(0, -4) * cartItems[i].amount;
       } else break;
     }
   }
