@@ -13,12 +13,14 @@ function CartItem({item}) {
   };
 
   const minusCount = () => {
+    item.amount = count - 1;
     if(count > 1) {
       setCount(count => count - 1);
     }
   }
 
   const plusCount = () => {
+    item.amount = count + 1;
     setCount(count => count + 1);
   }
 
@@ -35,7 +37,7 @@ function CartItem({item}) {
               <p>Total price: {item.sale === '1' ? ((item.price.slice(0, -4) / 2).toFixed(2) * JSON.stringify(item.amount)).toFixed(2) + ' EUR' : ((item.price.slice(0, -4)) * JSON.stringify(item.amount)).toFixed(2) + ' EUR'}</p>
               <div>
                 <button className="cart-btn" onClick={minusCount}>-</button>
-                <b style={{padding: '10px'}}>{item.amount ? item.amount : count}</b>
+                <b style={{padding: '10px'}}>{count}</b>
                 <button className="cart-btn" onClick={plusCount}>+</button>
               </div>
               <button className="cart-btn" onClick={handleRemove}>Remove item</button>
