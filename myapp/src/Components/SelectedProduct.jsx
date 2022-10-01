@@ -134,7 +134,7 @@ function SelectedProduct() {
             <button onClick={plusCount}>+</button>
           </div>
           <div className="col-size">
-            <button onClick={addToCart}>ADD TO CART</button>
+            <button id="add" onClick={addToCart}>ADD TO CART</button>
           </div>
         </div>
       </div>

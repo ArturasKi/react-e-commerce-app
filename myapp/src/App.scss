@@ -221,6 +221,7 @@ html {
       position: absolute;
       top: 20px;
       right: 20px;
+      font-size: 26px;
       cursor: pointer;
     }
 
@@ -230,6 +231,7 @@ html {
 
     .menu-item {
       margin: 0 0 90px 0;
+      font-size: 20px;
     }
   }
 
@@ -250,6 +252,7 @@ html {
       position: absolute;
       top: 20px;
       right: 20px;
+      font-size: 26px;
       cursor: pointer;
     }
 
@@ -259,6 +262,7 @@ html {
 
     .menu-item {
       margin: 0 0 90px 0;
+      font-size: 20px;
 
       &:hover {
         color: #ffcd00;
@@ -768,13 +772,16 @@ html {
 
   .image {
     transition: 5s all;
+    height: 450px;
+
+    img {
+      height: 450px;
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
-  img {
-    height: 450px;
-    width: 100%;
-    object-fit: cover;
-  }
+
 
   .read-images:hover .image {
     transform: scale(1.3);

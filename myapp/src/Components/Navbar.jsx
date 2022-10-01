@@ -10,6 +10,10 @@ import AppContext from "./AppContext";
 function Navbar() {
   const { cartItems } = useContext(AppContext);
 
+  const [navbar, setNavbar] = useState(false);
+  const [searchToggle, setSearchToggle] = useState(true);
+  const [open, setOpen] = useState(false);
+
   let allItems = 0;
 
   // REIKIA SUTVARKYTI, KAD CIKLAS PASILEISTŲ PO 'ADD TO CART' PASPAUDIMO;
@@ -21,13 +25,8 @@ function Navbar() {
     }
   }
 
-  window.addEventListener('resize', () => open ? setOpen(!open) : null);
-
-  console.log(allItems);
-
-  const [navbar, setNavbar] = useState(false);
-  const [searchToggle, setSearchToggle] = useState(true);
-  const [open, setOpen] = useState(false);
+  // const btn = document.getElementById('add');
+  // btn.addEventListener('click', function () {})
 
   const changeBackground = () => {
     if (window.scrollY >= 90) {
@@ -37,6 +36,7 @@ function Navbar() {
     }
   };
 
+  window.addEventListener('resize', () => open ? setOpen(!open) : null);
   window.addEventListener("scroll", changeBackground);
 
   const click = () => {
