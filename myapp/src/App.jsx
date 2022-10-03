@@ -22,6 +22,9 @@ function App() {
   const [editItem, setEditItem] = useState(null);
 
   const cartItems = JSON.parse(localStorage.getItem("cartItems"));
+  const costs = JSON.parse(localStorage.getItem("allCost"));
+
+  console.log(costs)
 
   // READ
   useEffect(() => {

@@ -15,18 +15,17 @@ function Navbar() {
   const [open, setOpen] = useState(false);
 
   let allItems = 0;
-
-  // REIKIA SUTVARKYTI, KAD CIKLAS PASILEISTŲ PO 'ADD TO CART' PASPAUDIMO;
-  if (cartItems !== null) {
-    for (let i = 0; i < cartItems.length; i++) {
-      if (cartItems.length !== null) {
-        allItems += cartItems[i].amount;
-      } else break;
+  const itemsCart = function () {
+    if (cartItems !== null) {
+      for (let i = 0; i < cartItems.length; i++) {
+        if (cartItems.length !== null) {
+          allItems += cartItems[i].amount;
+        }
+      }
     }
-  }
-
-  // const btn = document.getElementById('add');
-  // btn.addEventListener('click', function () {})
+  };
+  itemsCart();
+  console.log(allItems);
 
   const changeBackground = () => {
     if (window.scrollY >= 90) {
@@ -36,7 +35,7 @@ function Navbar() {
     }
   };
 
-  window.addEventListener('resize', () => open ? setOpen(!open) : null);
+  window.addEventListener("resize", () => (open ? setOpen(!open) : null));
   window.addEventListener("scroll", changeBackground);
 
   const click = () => {
