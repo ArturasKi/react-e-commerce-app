@@ -9,16 +9,16 @@ function CartList() {
   let allCost = 0;
   if (cartItems !== null) {
     for (let i = 0; i < cartItems.length; i++) {
+      const itemPrice = +cartItems[i].price.slice(0, -4);
+      const itemAmount = cartItems[i].amount;
       if (cartItems.length !== null) {
         allCost +=
           cartItems[i].sale === "1"
-            ? (cartItems[i].price.slice(0, -4) / 2) * cartItems[i].amount
-            : cartItems[i].price.slice(0, -4) * cartItems[i].amount;
-            JSON.stringify(localStorage.setItem("allCost", allCost));
+            ? ((itemPrice / 2).toFixed(2) * itemAmount)
+            : (itemPrice.toFixed(2) * itemAmount);
       } else break;
     }
   }
-  console.log(allCost);
 
   // KOLKAS PANAIKINAM...
   const checkOut = () => {

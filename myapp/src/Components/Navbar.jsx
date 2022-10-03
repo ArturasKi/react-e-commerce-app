@@ -25,7 +25,6 @@ function Navbar() {
     }
   };
   itemsCart();
-  console.log(allItems);
 
   const changeBackground = () => {
     if (window.scrollY >= 90) {
