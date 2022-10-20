@@ -442,7 +442,7 @@ export const products = [
   {
     id: 65,
     title: "Red Wing Classic Moc",
-    category: "shoes",
+    category: "wshoes",
     price: "299.99 EUR",
     img: wpr_shoes_1,
     color: ["pink", "brown", "black", "olive"],
@@ -451,7 +451,7 @@ export const products = [
   {
     id: 66,
     title: "Red Wing Classic Chelsea",
-    category: "shoes",
+    category: "wshoes",
     price: "309.99 EUR",
     img: wpr_shoes_2,
     color: ["black", "brown", "burlywood", "darksalmon"],
@@ -460,7 +460,7 @@ export const products = [
   {
     id: 67,
     title: "Red Wing Clara",
-    category: "shoes",
+    category: "wshoes",
     price: "339.99 EUR",
     img: wpr_shoes_3,
     color: ["black", "brown", "burlywood"],

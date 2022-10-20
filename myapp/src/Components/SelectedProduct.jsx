@@ -98,6 +98,15 @@ function SelectedProduct() {
               <option value="44">44</option>
               <option value="45">45</option>
             </select>
+          ) : localStorage.category === "wshoes" ? (
+            <select onChange={selectSize} value={size}>
+              <option value="Size">Size</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+            </select>
           ) : localStorage.category === "accessories" ? (
             <select onChange={selectSize} value={size}>
               <option value="Size">Size</option>
