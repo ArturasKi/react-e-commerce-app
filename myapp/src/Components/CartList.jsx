@@ -22,7 +22,10 @@ function CartList() {
 
   // KOLKAS PANAIKINAM...
   const checkOut = () => {
-    localStorage.clear("cartItems", []);
+    if (cartItems === null) {
+      console.log('Cart is empty');
+    } else console.log(cartItems);
+    // localStorage.clear("cartItems", []);
   };
 
   return (
@@ -49,7 +52,7 @@ function CartList() {
           {allCost > 69.99 ? " (You get free shipping!)" : null}
         </p>
         <div style={{ display: "flex" }}>
-          <input type="checkbox"></input>
+          <input type="checkbox" required></input>
           <p style={{ marginLeft: "5px" }}>
             I have read, understood and agreed with your terms and condition.{" "}
             <a href=".">See More Details</a>

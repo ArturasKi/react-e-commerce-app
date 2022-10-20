@@ -1150,7 +1150,7 @@ html {
   align-items: center;
   background-color: antiquewhite;
   position: relative;
-  // width: 100%;
+  width: 100%;
 
   .sale {
     position: absolute;
@@ -1312,11 +1312,11 @@ html {
 @media only screen and (max-width: 650px) {
   .sel-container {
     flex-wrap: wrap;
-    // width: 100%;
+    width: 100%;
 
     img {
-      height: 350px;
-      padding: 50px;
+      max-height: 300px;
+      padding: 10px;
       width: 100%;
     }
 
