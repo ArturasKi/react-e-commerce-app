@@ -25,6 +25,34 @@ import pr_sweater3 from './Images/Products/Mens/Sweaters/pr_sweater3.png';
 import pr_jacket1 from './Images/Products/Mens/Jackets/pr_jacket1.png';
 import pr_jacket2 from './Images/Products/Mens/Jackets/pr_jacket2.png';
 import pr_jacket3 from './Images/Products/Mens/Jackets/pr_jacket3.png';
+import wpr_acc_1 from './Images/Products/Womens/Accessories/wpr_acc_1.png';
+import wpr_acc_2 from './Images/Products/Womens/Accessories/wpr_acc_2.png';
+import wpr_acc_3 from './Images/Products/Womens/Accessories/wpr_acc_3.png';
+import wpr_acc_4 from './Images/Products/Womens/Accessories/wpr_acc_4.png';
+import wpr_acc_5 from './Images/Products/Womens/Accessories/wpr_acc_5.png';
+import wpr_dress_1 from './Images/Products/Womens/Dresses/wpr_dress_1.png';
+import wpr_dress_2 from './Images/Products/Womens/Dresses/wpr_dress_2.png';
+import wpr_dress_3 from './Images/Products/Womens/Dresses/wpr_dress_3.png';
+import wpr_jacket_1 from './Images/Products/Womens/Jackets/wpr_jacket_1.png';
+import wpr_jacket_2 from './Images/Products/Womens/Jackets/wpr_jacket_2.png';
+import wpr_jacket_3 from './Images/Products/Womens/Jackets/wpr_jacket_3.png';
+import wpr_jeans_1 from './Images/Products/Womens/Jeans/wpr_jeans_1.png';
+import wpr_jeans_2 from './Images/Products/Womens/Jeans/wpr_jeans_2.png';
+import wpr_jeans_3 from './Images/Products/Womens/Jeans/wpr_jeans_3.png';
+import wpr_shoes_1 from './Images/Products/Womens/Shoes/wpr_shoes_1.png';
+import wpr_shoes_2 from './Images/Products/Womens/Shoes/wpr_shoes_2.png';
+import wpr_shoes_3 from './Images/Products/Womens/Shoes/wpr_shoes_3.png';
+import wpr_skirt_1 from './Images/Products/Womens/Skirts/wpr_skirt_1.png';
+import wpr_skirt_2 from './Images/Products/Womens/Skirts/wpr_skirt_2.png';
+import wpr_sweater_1 from './Images/Products/Womens/Sweaters/wpr_sweater_1.png';
+import wpr_sweater_2 from './Images/Products/Womens/Sweaters/wpr_sweater_2.png';
+import wpr_sweater_3 from './Images/Products/Womens/Sweaters/wpr_sweater_3.png';
+import wpr_sweater_4 from './Images/Products/Womens/Sweaters/wpr_sweater_4.png';
+import wpr_sweater_5 from './Images/Products/Womens/Sweaters/wpr_sweater_5.png';
+import wpr_tee_1 from './Images/Products/Womens/Tees/wpr_tee_1.png';
+import wpr_tee_2 from './Images/Products/Womens/Tees/wpr_tee_2.png';
+import wpr_tee_4 from './Images/Products/Womens/Tees/wpr_tee_4.png';
+import wpr_tee_5 from './Images/Products/Womens/Tees/wpr_tee_5.png';
 
 export const sliderData = [
     {
@@ -284,6 +312,258 @@ export const products = [
         img: pr_cap5,
         color: ['black', 'navy', 'brown', 'darkgrey', 'darkgreen'],
         sale: 0
+    },
+    {
+        id: 51,
+        title: 'Summer hat',
+        category: 'accessories',
+        price: '32.99 EUR',
+        img: wpr_acc_1,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 52,
+        title: 'Summer hat',
+        category: 'accessories',
+        price: '32.99 EUR',
+        img: wpr_acc_2,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 53,
+        title: 'Summer hat',
+        category: 'accessories',
+        price: '32.99 EUR',
+        img: wpr_acc_3,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 54,
+        title: 'Summer hat',
+        category: 'accessories',
+        price: '32.99 EUR',
+        img: wpr_acc_4,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 55,
+        title: 'Summer hat',
+        category: 'accessories',
+        price: '32.99 EUR',
+        img: wpr_acc_5,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 56,
+        title: 'Dress',
+        category: 'dresses',
+        price: '32.99 EUR',
+        img: wpr_dress_1,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 57,
+        title: 'Dress',
+        category: 'dresses',
+        price: '32.99 EUR',
+        img: wpr_dress_2,
+        color: ['black', 'beige', 'white'],
+        sale: 1
+    },
+    {
+        id: 58,
+        title: 'Dress',
+        category: 'dresses',
+        price: '32.99 EUR',
+        img: wpr_dress_3,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 59,
+        title: 'Jacket',
+        category: 'jackets',
+        price: '32.99 EUR',
+        img: wpr_jacket_1,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 60,
+        title: 'Jacket',
+        category: 'jackets',
+        price: '32.99 EUR',
+        img: wpr_jacket_2,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 61,
+        title: 'Jacket',
+        category: 'jackets',
+        price: '32.99 EUR',
+        img: wpr_jacket_3,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 62,
+        title: 'Jeans',
+        category: 'jeans',
+        price: '32.99 EUR',
+        img: wpr_jeans_1,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 63,
+        title: 'Jeans',
+        category: 'jeans',
+        price: '32.99 EUR',
+        img: wpr_jeans_2,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 64,
+        title: 'Jeans',
+        category: 'jeans',
+        price: '32.99 EUR',
+        img: wpr_jeans_3,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 65,
+        title: 'Shoes',
+        category: 'shoes',
+        price: '32.99 EUR',
+        img: wpr_shoes_1,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 66,
+        title: 'Shoes',
+        category: 'shoes',
+        price: '32.99 EUR',
+        img: wpr_shoes_2,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 67,
+        title: 'Shoes',
+        category: 'shoes',
+        price: '32.99 EUR',
+        img: wpr_shoes_3,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 68,
+        title: 'Skirt',
+        category: 'skirts',
+        price: '32.99 EUR',
+        img: wpr_skirt_1,
+        color: ['black', 'beige', 'white'],
+        sale: 1
+    },
+    {
+        id: 69,
+        title: 'Skirt',
+        category: 'skirts',
+        price: '32.99 EUR',
+        img: wpr_skirt_2,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 70,
+        title: 'Sweater',
+        category: 'sweaters',
+        price: '32.99 EUR',
+        img: wpr_sweater_1,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 71,
+        title: 'Sweater',
+        category: 'sweaters',
+        price: '32.99 EUR',
+        img: wpr_sweater_2,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 72,
+        title: 'Sweater',
+        category: 'sweaters',
+        price: '32.99 EUR',
+        img: wpr_sweater_3,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 73,
+        title: 'Sweater',
+        category: 'sweaters',
+        price: '32.99 EUR',
+        img: wpr_sweater_4,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 74,
+        title: 'Sweater',
+        category: 'sweaters',
+        price: '32.99 EUR',
+        img: wpr_sweater_5,
+        color: ['black', 'beige', 'white'],
+        sale: 1
+    },
+    {
+        id: 75,
+        title: 'Tee',
+        category: 'tees',
+        price: '32.99 EUR',
+        img: wpr_tee_1,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 76,
+        title: 'Tee',
+        category: 'tees',
+        price: '32.99 EUR',
+        img: wpr_tee_2,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 77,
+        title: 'Tee',
+        category: 'tees',
+        price: '32.99 EUR',
+        img: wpr_tee_4,
+        color: ['black', 'beige', 'white'],
+        sale: 0
+    },
+    {
+        id: 78,
+        title: 'Tee',
+        category: 'tees',
+        price: '32.99 EUR',
+        img: wpr_tee_5,
+        color: ['black', 'beige', 'white'],
+        sale: 1
     },
 ]
 

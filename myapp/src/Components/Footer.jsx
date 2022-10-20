@@ -20,28 +20,24 @@ function Footer() {
         </div>
         <div className="col">
           <h3>MENS</h3>
-          <a href=".">Tees</a>
-          <a href=".">Shirts</a>
-          <a href=".">Fleece</a>
-          <a href=".">Jackets</a>
-          <a href=".">Jerseys</a>
-          <a href=".">Pants</a>
-          <a href=".">Shorts</a>
-          <a href=".">Shoes</a>
           <a href=".">Accessories</a>
+          <a href=".">Jackets</a>
+          <a href=".">Pants</a>
+          <a href=".">Shirts</a>
+          <a href=".">Shoes</a>
+          <a href=".">Sweaters</a>
+          <a href=".">T-shirts</a>
           <a href=".">On sale</a>
         </div>
         <div className="col">
           <h3>WOMENS</h3>
-          <a href=".">Dresses</a>
-          <a href=".">Tees</a>
-          <a href=".">Skirts</a>
-          <a href=".">Jackets</a>
-          <a href=".">Sweaters</a>
-          <a href=".">Pants</a>
-          <a href=".">Shirts</a>
-          <a href=".">Shorts</a>
           <a href=".">Accessories</a>
+          <a href=".">Dresses</a>
+          <a href=".">Jackets</a>
+          <a href=".">Pants</a>
+          <a href=".">Skirts</a>
+          <a href=".">Sweaters</a>
+          <a href=".">Tees</a>
           <a href=".">On sale</a>
         </div>
         <div className="col">

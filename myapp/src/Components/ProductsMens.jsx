@@ -7,9 +7,9 @@ function ProductsMens() {
 
   return (
     <div className="pr-container">
-      {products.map((product) => (
+      {products.map((product) => product.id <= 50 ? (
         <ProductMens key={product.id} product={product} />
-      ))}
+      ) : null)}
     </div>
   );
 }
