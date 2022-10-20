@@ -1044,9 +1044,11 @@ html {
 .filter-container {
   display: flex;
   justify-content: space-between;
+  // gap: 20px;
   width: 100%;
 
   .filter {
+    // width: 50%;
     margin: 0 30px;
 
     select {
@@ -1059,16 +1061,17 @@ html {
   }
 
   .sort {
-    // margin: 0;
+    // width: 50%;
+    margin: 0 30px;
 
     h3 {
-      margin-right: 30px;
+      // margin-right: 30px;
       text-align: end;
     }
 
     select:nth-child(2) {
       padding: 10px;
-      margin: 0 30px 0 0;
+      // margin: 0 30px 0 0;
     }
   }
 }
@@ -1082,31 +1085,30 @@ html {
       h3 {
         font-size: 14px;
       }
-  
+
       select {
         padding: 5px;
       }
-  
+
       select:nth-child(2) {
         margin-right: 10px;
       }
     }
-  
+
     .sort {
-  
+
       h3 {
         font-size: 14px;
       }
-  
+
       select:nth-child(2) {
         padding: 5px;
-        margin: 0 30px 0 0;
       }
     }
   }
 }
 
-@media only screen and (max-width: 412px) {
+@media only screen and (max-width: 443px) {
   .filter-container {
     flex-wrap: wrap;
 
@@ -1115,16 +1117,16 @@ html {
       h3 {
         font-size: 14px;
       }
-  
+
       select {
         padding: 5px;
       }
-  
+
       select:nth-child(2) {
         margin-right: 10px;
       }
     }
-  
+
     .sort {
 
       margin-left: 30px;
@@ -1133,10 +1135,9 @@ html {
         margin-left: 0px;
         text-align: start;
       }
-  
+
       select:nth-child(2) {
         padding: 5px;
-        margin: 0;
       }
     }
   }
