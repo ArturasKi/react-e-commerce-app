@@ -1044,6 +1044,7 @@ html {
 .filter-container {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 
   .filter {
     margin: 0 30px;
@@ -1059,7 +1060,6 @@ html {
 
   .sort {
     // margin: 0;
-    float: right;
 
     h3 {
       margin-right: 30px;
