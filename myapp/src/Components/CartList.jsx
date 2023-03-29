@@ -14,8 +14,8 @@ function CartList() {
       if (cartItems.length !== null) {
         allCost +=
           cartItems[i].sale === "1"
-            ? ((itemPrice / 2).toFixed(2) * itemAmount)
-            : (itemPrice.toFixed(2) * itemAmount);
+            ? (itemPrice / 2).toFixed(2) * itemAmount
+            : itemPrice.toFixed(2) * itemAmount;
       } else break;
     }
   }
@@ -23,7 +23,7 @@ function CartList() {
   // KOLKAS PANAIKINAM...
   const checkOut = () => {
     if (cartItems === null) {
-      console.log('Cart is empty');
+      console.log("Cart is empty");
     } else console.log(cartItems);
     // localStorage.clear("cartItems", []);
   };

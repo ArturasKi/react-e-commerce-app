@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { GrSearch, GrCart, GrClose } from "react-icons/gr";
 import { RiAccountCircleLine, RiCloseFill } from "react-icons/ri";
 import { CgMenu, CgMenuMotion } from "react-icons/cg";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
 import AppContext from "./AppContext";
 
 function Navbar() {

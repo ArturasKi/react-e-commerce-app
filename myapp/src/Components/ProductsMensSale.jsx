@@ -7,9 +7,11 @@ function ProductsMensSale() {
 
   return (
     <div className="pr-container">
-      {products.map((product) => product.sale === 1 ? (
-        <ProductMens key={product.id} product={product} />
-      ) : null)}
+      {products.map((product) =>
+        product.sale === 1 ? (
+          <ProductMens key={product.id} product={product} />
+        ) : null
+      )}
     </div>
   );
 }

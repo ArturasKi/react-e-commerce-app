@@ -37,15 +37,15 @@ function App() {
     setLastUpdate(Date.now());
   }, [createItem]);
 
-   // DELETE
-   useEffect(() => {
+  // DELETE
+  useEffect(() => {
     if (null === deleteItem) {
       return;
     }
     remove(deleteItem);
     setLastUpdate(Date.now());
   }, [deleteItem]);
-  
+
   // EDIT
   useEffect(() => {
     if (null === editItem) {
@@ -63,7 +63,7 @@ function App() {
         setCreateItem,
         setDeleteItem,
         setEditItem,
-        cartItems
+        cartItems,
       }}
     >
       <BrowserRouter>

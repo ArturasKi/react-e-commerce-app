@@ -1,12 +1,10 @@
 function Reading({ reading }) {
-
-    const selectReading = () => {
-        localStorage.setItem("id", reading.id);
-        localStorage.setItem("title", reading.title);
-        localStorage.setItem("date", JSON.stringify(reading.date));
-        localStorage.setItem("img", JSON.stringify(reading.img));
-      };
-
+  const selectReading = () => {
+    localStorage.setItem("id", reading.id);
+    localStorage.setItem("title", reading.title);
+    localStorage.setItem("date", JSON.stringify(reading.date));
+    localStorage.setItem("img", JSON.stringify(reading.img));
+  };
 
   return (
     <div className="col-read">
@@ -24,7 +22,9 @@ function Reading({ reading }) {
           expedita ratione fugiat at rerum voluptatum, totam est. Quam eius
           soluta natus.
         </p>
-        <a onClick={selectReading} href="/blog/reading">Read more</a>
+        <a onClick={selectReading} href="/blog/reading">
+          Read more
+        </a>
       </div>
     </div>
   );

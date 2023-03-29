@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { FiHeart, FiShoppingCart, FiSearch } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import AppContext from "./AppContext";
@@ -25,7 +24,7 @@ function ProductMens({ product }) {
       color: "",
       size: "",
       amount: 1,
-      sale: localStorage.sale
+      sale: localStorage.sale,
     };
     setCreateItem(data);
   };
@@ -50,8 +49,14 @@ function ProductMens({ product }) {
     <div className="products">
       <img className="pr-images" src={product.img} alt="" />
       <div className={product.sale ? "sale" : "hidden"}>SALE</div>
-      <div className={product.sale ? "salePrice" : "price"}>{product.sale ? (((product.price).slice(0, -4) / 2).toFixed(2)) + ' EUR' : product.price}</div>
-      <div className={product.sale ? "oldprice" : null}>{product.sale ? product.price : null}</div>
+      <div className={product.sale ? "salePrice" : "price"}>
+        {product.sale
+          ? (product.price.slice(0, -4) / 2).toFixed(2) + " EUR"
+          : product.price}
+      </div>
+      <div className={product.sale ? "oldprice" : null}>
+        {product.sale ? product.price : null}
+      </div>
       {like === true ? <FiHeart className="heart" /> : null}
       <div className="info">
         <div className="icon">

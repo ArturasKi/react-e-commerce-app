@@ -6,12 +6,12 @@ import SelectedProduct from "../Components/SelectedProduct";
 function ProductPage() {
   return (
     <div>
-        <Announcement />
-        <Navbar />
-        <SelectedProduct />
-        <Footer />
+      <Announcement />
+      <Navbar />
+      <SelectedProduct />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default ProductPage
+export default ProductPage;

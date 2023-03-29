@@ -39,7 +39,7 @@ function SelectedReading() {
         </p>
       </div>
       <div className="img-col">
-          <img src={JSON.parse(localStorage.img)} alt="" />
+        <img src={JSON.parse(localStorage.img)} alt="" />
       </div>
       <div className="reading-col">
         <p>

@@ -7,44 +7,51 @@ function Slider() {
   const [slideIndex, setSlideIndex] = useState(0);
 
   const handleClick = (direction) => {
-
-    if(direction === 'left') {
+    if (direction === "left") {
       // jei index > 0 => 0 - 1 - 2
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
     } else {
-      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
-  }
+  };
 
   const slideDown = () => {
-    const element = document.querySelector('.pr-container');
+    const element = document.querySelector(".pr-container");
     element.scrollIntoView();
-  }
+  };
 
   return (
     <div className="slider-container">
-      <div direction="left" className="arrow left" onClick={() => handleClick("left")}>
+      <div
+        direction="left"
+        className="arrow left"
+        onClick={() => handleClick("left")}
+      >
         <RiArrowLeftSFill />
       </div>
       <Wrapper slideIndex={slideIndex}>
-        {sliderData ? sliderData.map((item) =>
-          (
-            <div
-              key={item.id}
-              className='slide'
-              style={{ backgroundColor: item.bg}}
-            > 
-                <img className="img-container" src={item.img} alt=''/>
+        {sliderData
+          ? sliderData.map((item) => (
+              <div
+                key={item.id}
+                className="slide"
+                style={{ backgroundColor: item.bg }}
+              >
+                <img className="img-container" src={item.img} alt="" />
                 <div className="info-container">
-                    <h1>{item.title}</h1>
-                    <p>{item.desc}</p>
-                    <button onClick={slideDown}>SHOP NOW</button>
+                  <h1>{item.title}</h1>
+                  <p>{item.desc}</p>
+                  <button onClick={slideDown}>SHOP NOW</button>
                 </div>
-            </div>
-          )
-        ) : null}
+              </div>
+            ))
+          : null}
       </Wrapper>
-      <div direction="right" className="arrow right" onClick={() => handleClick("right")}>
+      <div
+        direction="right"
+        className="arrow right"
+        onClick={() => handleClick("right")}
+      >
         <RiArrowRightSFill />
       </div>
     </div>
@@ -52,14 +59,3 @@ function Slider() {
 }
 
 export default Slider;
-
-/* <div className="wrapper">
-  <div className="slide">
-    <div className="img-container"></div>
-    <div className="info-container">
-      <h1>SUMMER SALE</h1>
-      <p>DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.</p>
-      <button>SHOP NOW</button>
-    </div>
-  </div>
-</div> */
