@@ -13,6 +13,7 @@ import Sale from "./Pages/Sale";
 import { useEffect, useState } from "react";
 import { create, read, remove, edit } from "./Functions/localStorage";
 import BlogReading from "./Pages/BlogReading";
+import Account from "./Pages/Account";
 
 function App() {
   const [lastUpdate, setLastUpdate] = useState(Date.now());
@@ -78,6 +79,7 @@ function App() {
           <Route path="/blog/reading" element={<BlogReading />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/sale" element={<Sale />} />
+          <Route path="/account" element={<Account />} />
         </Routes>
       </BrowserRouter>
     </AppContext.Provider>
