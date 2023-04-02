@@ -22,53 +22,34 @@
         align-items: center;
     }
 
-    &__loginForm {
-        padding: 20px;
-        background-color: aquamarine;
-        width: 300px;
-        height: 400px;
-    }
-
-    &__signInForm {
-        padding: 20px;
-        background-color: aquamarine;
-        width: 300px;
-        height: 400px;
-    }
-
-
-    &__signUpContent {
+    &__formColumn {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 100%;
-        gap: 10px;
+        // height: 100%;
     }
 
-    &__signInContent {
+    &__formRow {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        gap: 10px;
+        margin-bottom: 40px;
+        position: relative;
+
+        label {
+            position: absolute;
+            top: -20px;
+        }
+
+        input {
+            padding: 8px;
+        }
     }
 
     &__title {
         font-size: 20px;
         display: flex;
         justify-content: center;
-        padding: 10px;
-    }
-
-    &__inputs {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-
-        input {
-            padding: 8px;
-        }
+        margin-bottom: 40px;
     }
 
     &__bottom {
