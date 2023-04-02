@@ -4,6 +4,10 @@ import "./scss/account.scss";
 function Account() {
   const [labelEmail, setLabelEmail] = useState("");
   const [labelPassword, setLabelPassword] = useState("");
+  const [labelFirstName, setLabelFirstName] = useState("");
+  const [labelLastName, setLabelLastName] = useState("");
+  const [labelEmailReg, setLabelEmailReg] = useState("");
+  const [labelPasswordReg, setLabelPasswordReg] = useState("");
 
   const setEmailLabel = (e) => {
     if (e.target.value !== "") {
@@ -15,6 +19,30 @@ function Account() {
     if (e.target.value !== "") {
       setLabelPassword("Password");
     } else setLabelPassword("");
+  };
+
+  const changeFirstNameLabel = (e) => {
+    if (e.target.value !== "") {
+      setLabelFirstName("First name");
+    } else setLabelFirstName("");
+  };
+
+  const changeLastNameLabel = (e) => {
+    if (e.target.value !== "") {
+      setLabelLastName("Last name");
+    } else setLabelLastName("");
+  };
+
+  const changeEmailRegLabel = (e) => {
+    if (e.target.value !== "") {
+      setLabelEmailReg("Email");
+    } else setLabelEmailReg("");
+  };
+
+  const changePasswordRegLabel = (e) => {
+    if (e.target.value !== "") {
+      setLabelPasswordReg("Password");
+    } else setLabelPasswordReg("");
   };
 
   return (
@@ -46,20 +74,20 @@ function Account() {
           <div className="accountWrapper__formColumn">
             <div className="accountWrapper__title">Hello there!</div>
             <div className="accountWrapper__formRow">
-              <label>First name</label>
-              <input />
+              <label>{labelFirstName}</label>
+              <input onChange={changeFirstNameLabel} placeholder="First name" />
             </div>
             <div className="accountWrapper__formRow">
-              <label>Last name</label>
-              <input />
+              <label>{labelLastName}</label>
+              <input onChange={changeLastNameLabel} placeholder="Last name" />
             </div>
             <div className="accountWrapper__formRow">
-              <label>Email</label>
-              <input />
+              <label>{labelEmailReg}</label>
+              <input onChange={changeEmailRegLabel} placeholder="Email" />
             </div>
             <div className="accountWrapper__formRow">
-              <label>Password</label>
-              <input />
+              <label>{labelPasswordReg}</label>
+              <input onChange={changePasswordRegLabel} placeholder="Password" />
             </div>
             <div className="accountWrapper__bottom">
               <button className="accountWrapper__btn">Create my account</button>
