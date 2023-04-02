@@ -1,5 +1,5 @@
 .accountWrapper {
-    background-color: papayawhip;
+    background-color: rgb(237, 174, 218);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -13,7 +13,6 @@
     }
 
     &__form {
-        border: 3px solid aquamarine;
         border-radius: 20px;
         padding: 20px;
         width: 800px;
@@ -27,7 +26,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        // height: 100%;
         flex: 1;
         padding: 20px;
     }
@@ -53,18 +51,34 @@
     }
 
     &__title {
-        font-size: 20px;
+        font-size: 24px;
         display: flex;
         justify-content: center;
         margin-bottom: 40px;
+        font-weight: 700;
     }
 
     &__bottom {
         display: flex;
         justify-content: center;
+        height: 50px;
     }
 
     &__btn {
-        padding: 10px;
+        padding: 15px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        background-color: #000;
+        color: #fff;
+        transition: all 0.3s;
+        width: 100%;
+
+        &:hover {
+            background-color: unset;
+            color: #000;
+            font-weight: 700;
+            font-size: 18px;
+        }
     }
 }

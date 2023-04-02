@@ -45,6 +45,15 @@ function Account() {
     } else setLabelPasswordReg("");
   };
 
+  const handleLogin = () => {
+    window.location.reload();
+  };
+
+  const handleCreateAccount = () => {
+    window.location.reload();
+  };
+
+
   return (
     <div className="accountWrapper">
       <div className="accountWrapper__formBlock">
@@ -68,7 +77,9 @@ function Account() {
               />
             </div>
             <div className="accountWrapper__bottom">
-              <button className="accountWrapper__btn">Login</button>
+              <button onClick={handleLogin} className="accountWrapper__btn">
+                Login
+              </button>
             </div>
           </div>
           <div className="accountWrapper__formColumn">
@@ -90,7 +101,13 @@ function Account() {
               <input onChange={changePasswordRegLabel} placeholder="Password" />
             </div>
             <div className="accountWrapper__bottom">
-              <button className="accountWrapper__btn">Create my account</button>
+              <button
+                onClick={handleCreateAccount}
+                type="submit"
+                className="accountWrapper__btn"
+              >
+                Create my account
+              </button>
             </div>
           </div>
         </div>
